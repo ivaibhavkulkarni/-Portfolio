@@ -1,101 +1,233 @@
-import Image from "next/image";
+"use client";
+import React from 'react';
+import { cn } from "@/lib/utils"; // Import your utility function
+import BlurFade from "@/components/ui/blur-fade"; // Import BlurFade component
+import AnimatedGridPattern from "@/components/ui/animated-grid-pattern"; // Import AnimatedGridPattern
+import { projects, experience, achievements } from "@/data/resume"; // Import projects from projects.js
+import { Button } from "@/components/ui/button";
+import BoxReveal from "@/components/ui/box-reveal";
+import IconCloud from "@/components/ui/icon-cloud";
+
+
+{/* skill cloud */}
+
+const slugs = [
+  "python",
+  "javascript",
+  "java",
+  "react",
+  "html5",
+  "css3",
+  "nodedotjs",
+  "express",
+  "nextdotjs",
+  "vercel",
+  "docker",
+  "git",
+  "github",
+  "visualstudiocode",
+  "swift",
+  "xcode",
+  "mongodb",
+  "mysql",
+  "postman",
+  "ubuntu",
+  "amazonaws",
+];
+
+export function IconCloudDemo() {
+  return (
+    <div className="relative flex w-full h-full items-center justify-center overflow-hidden rounded-lg bg-background px-0 py-0 pt-0 mt-0">
+      <IconCloud iconSlugs={slugs} />
+    </div>
+  );
+}
+
+
+
+// Main page
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div>
+      <div className="relative flex h-[100vh] w-full flex-col items-start justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl p-5 md:p-20">
+        
+        {/* Applying BlurFade effect to the first <p> */}
+        <BlurFade delay={0.25} inView>
+          <p className="z-10 whitespace-pre-wrap text-start text-4xl sm:text-5xl font-medium tracking-tighter text-black dark:text-white ml-8 mb-1">
+            VAIBHAV KULKARNI
+          </p>
+        </BlurFade> 
+        
+        {/* Applying BlurFade effect to the second <p> */}
+        <BlurFade delay={0.25 * 2} inView>
+          <p className="ml-8 text-lg sm:text-xl">Software Engineer</p>
+        </BlurFade>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        <BlurFade delay={0.25 * 2} inView>
+          <p className="ml-8 text-base sm:text-lg">Turning Ideas into Scalable Digital Solutions with Expertise in MERN Stack and iOS Mobile App Development</p>
+        </BlurFade>
+        
+        {/* Replacing GridPattern with AnimatedGridPattern */}
+        <AnimatedGridPattern
+          numSquares={30}
+          maxOpacity={0.1}
+          duration={3}
+          repeatDelay={1}
+          className={cn(
+            "[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]",
+            "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12"
+          )}
+        />
+      </div>
+
+      {/* Displaying Projects */}
+      <hr className="border-t-4 border-gray-300 dark:border-gray-700 h-[300%] mb-2" />
+      <h1 className="z-10 whitespace-pre-wrap text-start text-4xl sm:text-5xl font-medium tracking-tighter text-black dark:text-white ml-8 mb-1">
+        PROJECTS
+      </h1>
+      <hr className="border-t-4 border-gray-300 dark:border-gray-700 h-[300%] mb-2" />
+            
+      <div className="p-5 md:p-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 h-auto sm:h-[90vh]">
+        {projects.map((project, index) => (
+          <div key={index} className="bg-white p-6 rounded-lg shadow-lg h-[auto]">
+            <h3 className="font-bold text-lg sm:text-xl mb-2">{project.name}</h3>
+            <p className="text-gray-700 mb-4 text-sm sm:text-base">{project.description}</p>
+            <a 
+              href={project.githubLink} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-white bg-gray-800 hover:bg-blue-600 py-2 px-4 rounded-full text-sm sm:text-base"
+            >
+              GitHub Repository
+            </a>
+          </div>
+        ))}
+      </div>
+
+      {/* Displaying Work*/}
+      <div className="p-5 md:p-10 pt-0 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 h-auto sm:h-[75vh]">
+        <div className="size-full max-w-lg items-center justify-center overflow-hidden pt-0">
+          <BoxReveal boxColor={"#5046e6"} duration={0.5}>
+          <p className="z-10 whitespace-pre-wrap text-start text-4xl sm:text-5xl font-medium tracking-tighter text-black dark:text-white mb-1">
+              EXPERIENCE<span className="text-[#5046e6]">.</span>
+          </p>
+          </BoxReveal>
+
+          {/* Render experience dynamically */}
+          {experience.map((job, index) => (
+            <BoxReveal key={index} boxColor={"#5046e6"} duration={0.5}>
+              <div className="mt-6">
+                <h3 className="text-lg sm:text-xl font-semibold">{job.jobTitle}</h3>
+                <p className="text-sm">{job.company}</p>
+                <p className="text-sm text-gray-500">{job.duration}</p>
+                <p className="mt-2 text-sm sm:text-base">{job.description}</p>
+              </div>
+            </BoxReveal>
+          ))}
+
+          {/* Dynamically render the Explore button with link */}
+          {experience.map((job, index) => (
+            <BoxReveal key={index} boxColor={"#5046e6"} duration={0.5}>
+              <a href={job.link} target="_blank" rel="noopener noreferrer">
+                <Button className="mt-[1.6rem] bg-[#5046e6] text-sm sm:text-base">Explore</Button>
+              </a>
+            </BoxReveal>
+          ))}
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
+      </div>
+    
+      {/* Displaying Skills*/}
+      <hr className="border-t-4 border-gray-300 dark:border-gray-700 h-[300%] mb-2 mt-2" />
+      <h1 className="z-10 whitespace-pre-wrap text-start text-4xl sm:text-5xl font-medium tracking-tighter text-black dark:text-white ml-8 mb-1">
+        SKILLS
+      </h1>
+      <hr className="border-t-4 border-gray-300 dark:border-gray-700 h-[300%] mb-2" />
+      <div>
+        <IconCloudDemo />
+      </div>
+      
+      {/*Achievements */}
+      <hr className="border-t-4 border-gray-300 dark:border-gray-700 h-[300%] mb-2 mt-2" />
+      <h1 className="z-10 whitespace-pre-wrap text-start text-4xl sm:text-5xl font-medium tracking-tighter text-black dark:text-white ml-8 mb-1">
+        ACHIEVEMENTS
+      </h1>
+      <hr className="border-t-4 border-gray-300 dark:border-gray-700 h-[300%] mb-2" />
+    
+          
+<div className="space-y-8 h-[50vh]">
+  {achievements.map((achievement, index) => (
+    <div key={index} className="flex items-start space-x-4 ml-8 mt-8">
+      <div className="w-[4cm] h-[4cm]">
+      <img
+          src={achievement.image}
+          alt={achievement.title}
+          className="w-full h-full object-cover rounded-md"
+      />
+      </div>
+      <div className="flex flex-col justify-between ml-4">
+        <h3 className="text-lg sm:text-xl font-semibold">{achievement.title}</h3>
+        <div className="mt-2 text-sm sm:text-base text-gray-700">
+          {achievement.points.map((point, idx) => (
+            <p key={idx} className="mb-1">{point}</p>
+          ))}
+        </div>
         <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          href={achievement.link}
           target="_blank"
           rel="noopener noreferrer"
+          className="text-white bg-gray-800 hover:bg-blue-600 py-2 px-4 rounded-full text-sm sm:text-base w-[110px]"
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
+          Check Out
         </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+      </div>
+    </div>
+  ))}
+    </div>
+
+      {/* Footer */}
+      
+      <footer className="bg-black text-white py-8 flex flex-col justify-between h-[50vh]">
+  <div className="max-w-screen-lg mx-auto px-4 flex flex-col md:flex-row justify-between items-start space-y-6 md:space-y-0 md:gap-8">
+    
+    {/* Contact Information */}
+    <div className="space-y-4">
+      <h4 className="font-semibold text-lg">Contact</h4>
+      <p>
+        Email:
+        <a 
+          href="mailto:vaibhav.kulkarni0359@gmail.com" 
+          className="text-blue-500 underline ml-1"
         >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
+          vaibhav.kulkarni0359@gmail.com
         </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
+      </p>
+      <p>Phone: +91 95050 40359</p>
+    </div>
+
+    {/* Links Section with 200px Space */}
+    <div className="space-y-4 ml-[200px]">
+      <h4 className="font-semibold text-lg">Profiles</h4>
+      <div className="flex flex-col md:flex-row md:space-x-4 space-y-2 md:space-y-0">
+        <a href="https://www.linkedin.com/in/vaibhav-kulkarni-7230051ab/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">
+          LinkedIn
         </a>
-      </footer>
+        <a href="https://leetcode.com/u/user7623xD/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">
+          LeetCode
+        </a>
+        <a href="https://github.com/ivaibhavkulkarni" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">
+          GitHub
+        </a>
+      </div>
+    </div>
+  </div>
+
+  {/* Copyright Section */}
+  <div className="text-center mt-6">
+    <p className="text-sm">© {new Date().getFullYear()} Vaibhav Kulkarni. All rights reserved.</p>
+  </div>
+</footer>
+
     </div>
   );
 }
