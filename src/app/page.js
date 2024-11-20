@@ -187,7 +187,7 @@ export default function Home() {
 
       {/* Footer */}
       
-      <footer className="bg-black text-white py-8 flex flex-col justify-between h-[50vh]">
+      <footer className="bg-black text-white py-8 flex flex-col justify-between h-[55vh]">
   <div className="max-w-screen-lg mx-auto px-4 flex flex-col md:flex-row justify-between items-start space-y-6 md:space-y-0 md:gap-8">
     
     {/* Contact Information */}
@@ -205,8 +205,8 @@ export default function Home() {
       <p>Phone: +91 95050 40359</p>
     </div>
 
-    {/* Links Section with 200px Space */}
-    <div className="space-y-4 ml-[200px]">
+    {/* Links Section */}
+    <div className="space-y-4 md:ml-[200px]">
       <h4 className="font-semibold text-lg">Profiles</h4>
       <div className="flex flex-col md:flex-row md:space-x-4 space-y-2 md:space-y-0">
         <a href="https://www.linkedin.com/in/vaibhav-kulkarni-7230051ab/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">
@@ -227,6 +227,7 @@ export default function Home() {
     <p className="text-sm">© {new Date().getFullYear()} Vaibhav Kulkarni. All rights reserved.</p>
   </div>
 </footer>
+
 
     </div>
   );
