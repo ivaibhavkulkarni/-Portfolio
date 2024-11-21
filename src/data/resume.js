@@ -43,10 +43,9 @@ export const experience = [
 
 export const achievements = [
     {
-      title: "HacktoberFest 2024",
+      title: "HacktoberFest 2024 Participation",
       points: [
-        "Recognized for outstanding performance in software development.",
-        "Contributed to several key projects with innovative solutions."
+        " Demonstrated a strong commitment to open-source development by contributing to multiple MERN stack projects during Hacktoberfest. Successfully merged over four pull requests, showcasing effective team collaboration and adherence to best coding practices. Earned prestigious Hacktoberfest badges, reflecting dedication to continuous learning and active community involvement.",
       ],
       image:"https://styles.redditmedia.com/t5_3gryx/styles/communityIcon_iegzxkwcwkmd1.png",
       link: "https://www.holopin.io/@ivaibhavkulkarni#"
