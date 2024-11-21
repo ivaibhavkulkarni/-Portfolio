@@ -156,14 +156,14 @@ export default function Home() {
       <hr className="border-t-4 border-gray-300 dark:border-gray-700 h-[300%] mb-2" />
     
           
-<div className="space-y-8 h-[50vh]">
+<div className="space-y-8 h-[59vh]">
   {achievements.map((achievement, index) => (
     <div key={index} className="flex items-start space-x-4 ml-8 mt-8">
-      <div className="w-[4cm] h-[4cm]">
+      <div className="w-[5cm] h-[5cm]">
       <img
           src={achievement.image}
           alt={achievement.title}
-          className="w-full h-full object-cover rounded-md"
+          className="w-full sm:w-4/5 sm:mx-auto sm:block object-cover sm:object-contain"
       />
       </div>
       <div className="flex flex-col justify-between ml-4">
