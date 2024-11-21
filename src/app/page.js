@@ -109,7 +109,7 @@ export default function Home() {
       {/* Displaying Work*/}
       <div className="p-5 md:p-10 pt-0 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 h-auto sm:h-[75vh]">
         <div className="size-full max-w-lg items-center justify-center overflow-hidden pt-0">
-          <BoxReveal boxColor={"#5046e6"} duration={0.5}>
+          <BoxReveal boxColor={"#000000"} duration={0.5}>
           <p className="z-10 whitespace-pre-wrap text-start text-4xl sm:text-5xl font-medium tracking-tighter text-black dark:text-white mb-1">
               EXPERIENCE<span className="text-[#5046e6]">.</span>
           </p>
@@ -117,7 +117,7 @@ export default function Home() {
 
           {/* Render experience dynamically */}
           {experience.map((job, index) => (
-            <BoxReveal key={index} boxColor={"#5046e6"} duration={0.5}>
+            <BoxReveal key={index} boxColor={"#000000"} duration={0.5}>
               <div className="mt-6">
                 <h3 className="text-lg sm:text-xl font-semibold">{job.jobTitle}</h3>
                 <p className="text-sm">{job.company}</p>
@@ -129,9 +129,9 @@ export default function Home() {
 
           {/* Dynamically render the Explore button with link */}
           {experience.map((job, index) => (
-            <BoxReveal key={index} boxColor={"#5046e6"} duration={0.5}>
+            <BoxReveal key={index} boxColor={"#000000"} duration={0.5}>
               <a href={job.link} target="_blank" rel="noopener noreferrer">
-                <Button className="mt-[1.6rem] bg-[#5046e6] text-sm sm:text-base">Explore</Button>
+                <Button className="mt-[1.6rem] bg-[#000000] text-sm sm:text-base">Explore</Button>
               </a>
             </BoxReveal>
           ))}
