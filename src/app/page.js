@@ -89,7 +89,7 @@ export default function Home() {
       </h1>
       <hr className="border-t-4 border-gray-300 dark:border-gray-700 h-[300%] mb-2" />
             
-      <div className="p-5 md:p-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 h-auto sm:h-[90vh]">
+      <div className="p-5 md:p-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 h-auto sm:h-[90vh] lg:h-[100vh]">
         {projects.map((project, index) => (
           <div key={index} className="bg-white p-6 rounded-lg shadow-lg h-[auto]">
             <h3 className="font-bold text-lg sm:text-xl mb-2">{project.name}</h3>
@@ -108,7 +108,7 @@ export default function Home() {
 
       {/* Displaying Work*/}
       <div className="p-5 md:p-10 pt-0 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 h-auto sm:h-[75vh]">
-        <div className="size-full max-w-lg items-center justify-center overflow-hidden pt-0">
+        <div className="size-full max-w-lg items-center justify-center overflow-hidden pt-0 lg:h-[100vh]">
           <BoxReveal boxColor={"#000000"} duration={0.5}>
           <p className="z-10 whitespace-pre-wrap text-start text-4xl sm:text-5xl font-medium tracking-tighter text-black dark:text-white mb-1">
               EXPERIENCE<span className="text-[#5046e6]">.</span>
