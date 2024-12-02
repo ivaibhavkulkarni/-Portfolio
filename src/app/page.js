@@ -33,7 +33,8 @@ const slugs = [
   "postman",
   "ubuntu",
   "amazonaws",
-  "tailwindcss"
+  "tailwindcss",
+  "postgresql"
 ];
 
 export function IconCloudDemo() {
