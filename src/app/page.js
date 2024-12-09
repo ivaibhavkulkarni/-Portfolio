@@ -226,7 +226,7 @@ export default function Home() {
   </div>
 
   {/*Download Button*/}
-  <div className="z-10 flex min-h-64 items-center justify-center">
+  <div className="z-10 flex items-center justify-center mt-6">
   <a 
     href="/resume.pdf" 
     download="VAIBHAV_RESUME.pdf" 
