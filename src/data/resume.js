@@ -25,9 +25,9 @@ export const projects = [
     githubLink: "https://github.com/ivaibhavkulkarni/JavaScript-Projects/tree/main/Project-19%20Wikipedia%20Search%20App"
   },
   {
-    name: "Counter React App",
-    description: "The Counter React App is a simple React application that demonstrates the basics of state management and user interaction within a React component. The app features a counter that users can increment or decrement using buttons, and it serves as a foundational example for learning React.",
-    githubLink: "https://github.com/ivaibhavkulkarni/Projects-Node-JS/tree/main/Projects/Project-1%20Counter%20App/counter-app"
+    name: "Green Grocer - E-commerce Platform for Organic Products",
+    description: "I developed an e-commerce platform for organic products, integrating Stripe for seamless payment processing. To ensure secure login and registration, I implemented user authentication using Next-Auth. Additionally, I built an admin panel to manage sales, track stock, and monitor customer data. For efficient database management, I utilized PostgreSQL and Prisma, ensuring smooth handling of product and customer information. Looking ahead, I plan to integrate DevOps practices and develop a mobile version of the platform using Swift UI and Swift for iOS.",
+    githubLink: "https://github.com/ivaibhavkulkarni/E-commerce-Web-App-Using-Next-js"
   }
 ];
 
