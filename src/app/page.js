@@ -7,6 +7,7 @@ import { projects, experience, achievements } from "@/data/resume"; // Import pr
 import { Button } from "@/components/ui/button";
 import BoxReveal from "@/components/ui/box-reveal";
 import IconCloud from "@/components/ui/icon-cloud";
+import ShimmerButton from '@/components/ui/shimmer-button';
 
 
 {/* skill cloud */}
@@ -189,7 +190,7 @@ export default function Home() {
 
       {/* Footer */}
       
-      <footer className="bg-black text-white py-8 flex flex-col justify-between h-[55vh]">
+      <footer className="bg-black text-white py-8 flex flex-col justify-between h-[65vh]">
   <div className="max-w-screen-lg mx-auto px-4 flex flex-col md:flex-row justify-between items-start space-y-6 md:space-y-0 md:gap-8">
     
     {/* Contact Information */}
@@ -223,6 +224,22 @@ export default function Home() {
       </div>
     </div>
   </div>
+
+  {/*Download Button*/}
+  <div className="z-10 flex min-h-64 items-center justify-center">
+  <a 
+    href="/resume.pdf" 
+    download="VAIBHAV_RESUME.pdf" 
+    className="shadow-2xl"
+  >
+    <ShimmerButton className="shadow-2xl">
+      <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
+        Download Resume
+      </span>
+    </ShimmerButton>
+  </a>
+</div>
+
 
   {/* Copyright Section */}
   <div className="text-center mt-6">
