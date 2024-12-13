@@ -27,7 +27,7 @@ export const projects = [
   {
     name: "Green Grocer - E-commerce Platform for Organic Products",
     description: "I developed an e-commerce platform for organic products, integrating Stripe for payments and using Next-Auth for secure user authentication. I also built an admin panel to manage sales, stock, and customer data, utilizing PostgreSQL and Prisma for efficient database management. Looking ahead, I plan to integrate DevOps practices and create a mobile version using Swift UI and Swift for iOS.",
-    githubLink: "https://github.com/ivaibhavkulkarni/E-commerce-Web-App-Using-Next-js"
+    githubLink: "https://github.com/ivaibhavkulkarni/GreenGrocer-E-commerce"
   }
 ];
 
