@@ -30,7 +30,11 @@ export const cloudProps = {
   },
 };
 
-export const renderCustomIcon = (icon, theme) => {
+export const renderCustomIcon = (
+  icon,
+  theme,
+  imageArray,
+) => {
   const bgHex = theme === "light" ? "#f3f2ef" : "#080510";
   const fallbackHex = theme === "light" ? "#6e6e73" : "#ffffff";
   const minContrastRatio = theme === "dark" ? 2 : 1.2;
@@ -51,13 +55,19 @@ export const renderCustomIcon = (icon, theme) => {
 };
 
 export default function IconCloud({
-  iconSlugs
+  // Default to an empty array if not provided
+  iconSlugs = [],
+
+  imageArray
 }) {
   const [data, setData] = useState(null);
   const { theme } = useTheme();
 
   useEffect(() => {
-    fetchSimpleIcons({ slugs: iconSlugs }).then(setData);
+    if (iconSlugs.length > 0) {
+      // Check if iconSlugs is not empty
+      fetchSimpleIcons({ slugs: iconSlugs }).then(setData);
+    }
   }, [iconSlugs]);
 
   const renderedIcons = useMemo(() => {
@@ -70,7 +80,18 @@ export default function IconCloud({
   return (
     // @ts-ignore
     (<Cloud {...cloudProps}>
-      <>{renderedIcons}</>
+      <>
+        <>{renderedIcons}</>
+        {imageArray &&
+          imageArray.length > 0 &&
+          imageArray.map((image, index) => {
+            return (
+              (<a key={index} href="#" onClick={(e) => e.preventDefault()}>
+                <img height="42" width="42" alt="A globe" src={image} />
+              </a>)
+            );
+          })}
+      </>
     </Cloud>)
   );
 }
