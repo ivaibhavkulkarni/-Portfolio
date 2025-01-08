@@ -25,7 +25,7 @@ export const projects = [
   },
   {
     name: "LOTRConverter (iOS App)",
-    description: "Designed and developed an iOS app using SwiftUI for converting fictional Middle-earth currencies, focusing on a seamless and intuitive user experience. The app features reusable UI components and robust currency conversion logic implemented with Swift enums for accuracy and maintainability. To enhance user guidance, TipKit was integrated, providing interactive tooltips that improved usability and engagement. The project adopted a modular architecture with state management and dynamic view updates, ensuring scalability and ease of future development. This app highlights a blend of technical expertise and user-centric design.",
+    description: "Developed an iOS app using SwiftUI to convert fictional Middle-earth currencies with reusable UI components and robust logic using enums. Integrated TipKit for interactive tooltips, enhancing user guidance and experience. Leveraged modular architecture with state management for scalability and maintainability.",
     githubLink: "https://github.com/ivaibhavkulkarni/LOTRConverter",
     technologies: ["SwiftUI","Swift","Xcode", "MVVM"],
     images: [
