@@ -10,10 +10,7 @@ import IconCloud from "@/components/ui/icon-cloud";
 import ShimmerButton from '@/components/ui/shimmer-button';
 import { ProjectsSection } from '@/components/ui/ProjectsSection';
 
-
-
-{/* skill cloud */}
-
+// Skill cloud
 const slugs = [
   "python",
   "javascript",
@@ -50,10 +47,7 @@ export function IconCloudDemo() {
   );
 }
 
-
-
 // Main page
-
 export default function Home() {
   return (
     <div>
@@ -95,16 +89,16 @@ export default function Home() {
       </h1>
       <hr className="border-t-4 border-gray-300 dark:border-gray-700 h-[300%] mb-2" />
       <div>
-      <ProjectsSection />
+        <ProjectsSection />
       </div>
 
-      {/* Displaying Work*/}
+      {/* Displaying Work */}
       <div className="p-5 md:p-10 pt-0 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 h-auto sm:h-[75vh] h-auto">
         <div className="size-full max-w-lg items-center justify-center overflow-hidden pt-0 lg:h-[100vh]">
           <BoxReveal boxColor={"#000000"} duration={0.5}>
-          <p className="z-10 whitespace-pre-wrap text-start text-4xl sm:text-5xl font-medium tracking-tighter text-black dark:text-white mb-1">
+            <p className="z-10 whitespace-pre-wrap text-start text-4xl sm:text-5xl font-medium tracking-tighter text-black dark:text-white mb-1">
               EXPERIENCE<span className="text-[#5046e6]">.</span>
-          </p>
+            </p>
           </BoxReveal>
 
           {/* Render experience dynamically */}
@@ -130,7 +124,7 @@ export default function Home() {
         </div>
       </div>
     
-      {/* Displaying Skills*/}
+      {/* Displaying Skills */}
       <hr className="border-t-4 border-gray-300 dark:border-gray-700 h-[300%] mb-2 mt-2" />
       <h1 className="z-10 whitespace-pre-wrap text-start text-4xl sm:text-5xl font-medium tracking-tighter text-black dark:text-white ml-8 mb-1">
         SKILLS
@@ -140,104 +134,98 @@ export default function Home() {
         <IconCloudDemo />
       </div>
       
-      {/*Achievements */}
+      {/* Achievements */}
       <hr className="border-t-4 border-gray-300 dark:border-gray-700 h-[300%] mb-2 mt-2" />
       <h1 className="z-10 whitespace-pre-wrap text-start text-4xl sm:text-5xl font-medium tracking-tighter text-black dark:text-white ml-8 mb-1">
         ACHIEVEMENTS
       </h1>
       <hr className="border-t-4 border-gray-300 dark:border-gray-700 h-[300%] mb-2" />
     
-          
-<div className="space-y-8 h-[59vh]">
-  {achievements.map((achievement, index) => (
-    <div key={index} className="flex items-start space-x-4 ml-8 mt-8">
-      <div className="w-[5cm] h-[5cm]">
-      <img
-          src={achievement.image}
-          alt={achievement.title}
-          className="w-full sm:w-4/5 sm:mx-auto sm:block object-cover sm:object-contain"
-      />
+      <div className="space-y-8 h-[59vh]">
+        {achievements.map((achievement, index) => (
+          <div key={index} className="flex items-start space-x-4 ml-8 mt-8">
+            <div className="w-[5cm] h-[5cm]">
+              <img
+                src={achievement.image}
+                alt={achievement.title}
+                className="w-full sm:w-4/5 sm:mx-auto sm:block object-cover sm:object-contain"
+              />
+            </div>
+            <div className="flex flex-col justify-between ml-4">
+              <h3 className="text-lg sm:text-xl font-semibold">{achievement.title}</h3>
+              <div className="mt-2 text-sm sm:text-base text-gray-700">
+                {achievement.points.map((point, idx) => (
+                  <p key={idx} className="mb-1">{point}</p>
+                ))}
+              </div>
+              <a
+                href={achievement.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white bg-gray-800 hover:bg-blue-600 py-2 px-4 rounded-full text-sm sm:text-base w-[110px]"
+              >
+                Check Out
+              </a>
+            </div>
+          </div>
+        ))}
       </div>
-      <div className="flex flex-col justify-between ml-4">
-        <h3 className="text-lg sm:text-xl font-semibold">{achievement.title}</h3>
-        <div className="mt-2 text-sm sm:text-base text-gray-700">
-          {achievement.points.map((point, idx) => (
-            <p key={idx} className="mb-1">{point}</p>
-          ))}
-        </div>
-        <a
-          href={achievement.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-white bg-gray-800 hover:bg-blue-600 py-2 px-4 rounded-full text-sm sm:text-base w-[110px]"
-        >
-          Check Out
-        </a>
-      </div>
-    </div>
-  ))}
-    </div>
 
       {/* Footer */}
-      
       <footer className="bg-black text-white py-8 flex flex-col justify-between h-[65vh]">
-  <div className="max-w-screen-lg mx-auto px-4 flex flex-col md:flex-row justify-between items-start space-y-6 md:space-y-0 md:gap-8">
-    
-    {/* Contact Information */}
-    <div className="space-y-4">
-      <h4 className="font-semibold text-lg">Contact</h4>
-      <p>
-        Email:
-        <a 
-          href="mailto:vaibhav.kulkarni0359@gmail.com" 
-          className="text-blue-500 underline ml-1"
-        >
-          vaibhav.kulkarni0359@gmail.com
-        </a>
-      </p>
-      <p>Phone: +91 95050 40359</p>
-    </div>
+        <div className="max-w-screen-lg mx-auto px-4 flex flex-col md:flex-row justify-between items-start space-y-6 md:space-y-0 md:gap-8">
+          {/* Contact Information */}
+          <div className="space-y-4">
+            <h4 className="font-semibold text-lg">Contact</h4>
+            <p>
+              Email:
+              <a 
+                href="mailto:vaibhav.kulkarni0359@gmail.com" 
+                className="text-blue-500 underline ml-1"
+              >
+                vaibhav.kulkarni0359@gmail.com
+              </a>
+            </p>
+            <p>Phone: +91 95050 40359</p>
+          </div>
 
-    {/* Links Section */}
-    <div className="space-y-4 md:ml-[200px]">
-      <h4 className="font-semibold text-lg">Profiles</h4>
-      <div className="flex flex-col md:flex-row md:space-x-4 space-y-2 md:space-y-0">
-        <a href="https://www.linkedin.com/in/vaibhav-kulkarni-7230051ab/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">
-          LinkedIn
-        </a>
-        <a href="https://leetcode.com/u/user7623xD/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">
-          LeetCode
-        </a>
-        <a href="https://github.com/ivaibhavkulkarni" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">
-          GitHub
-        </a>
-      </div>
-    </div>
-  </div>
+          {/* Links Section */}
+          <div className="space-y-4 md:ml-[200px]">
+            <h4 className="font-semibold text-lg">Profiles</h4>
+            <div className="flex flex-col md:flex-row md:space-x-4 space-y-2 md:space-y-0">
+              <a href="https://www.linkedin.com/in/vaibhav-kulkarni-7230051ab/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">
+                LinkedIn
+              </a>
+              <a href="https://leetcode.com/u/user7623xD/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">
+                LeetCode
+              </a>
+              <a href="https://github.com/ivaibhavkulkarni" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
 
-  {/*Download Button*/}
-  <div className="z-10 flex items-center justify-center mt-6">
-  <a 
-    href="/resume.pdf" 
-    download="VAIBHAV_RESUME.pdf" 
-    className="shadow-2xl"
-  >
-    <ShimmerButton className="shadow-2xl">
-      <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
-        Download Resume
-      </span>
-    </ShimmerButton>
-  </a>
-</div>
+        {/* Download Button */}
+        <div className="z-10 flex items-center justify-center mt-6">
+          <a 
+            href="/resume.pdf" 
+            download="VAIBHAV_RESUME.pdf" 
+            className="shadow-2xl"
+          >
+            <ShimmerButton className="shadow-2xl">
+              <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
+                Download Resume
+              </span>
+            </ShimmerButton>
+          </a>
+        </div>
 
-
-  {/* Copyright Section */}
-  <div className="text-center mt-6">
-    <p className="text-sm">© {new Date().getFullYear()} Vaibhav Kulkarni. All rights reserved.</p>
-  </div>
-</footer>
-
-
+        {/* Copyright Section */}
+        <div className="text-center mt-6">
+          <p className="text-sm">© {new Date().getFullYear()} Vaibhav Kulkarni. All rights reserved.</p>
+        </div>
+      </footer>
     </div>
   );
 }
