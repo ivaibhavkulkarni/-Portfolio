@@ -13,8 +13,7 @@ export function ProjectsSection() {
   const [selectedProject, setSelectedProject] = useState(projects[0])
 
   return (
-    <div className="w-full max-w-4xl mx-auto p-8 h-screen">
-      
+    <div className="w-full max-w-4xl mx-auto p-4 md:p-8">
       <Select onValueChange={(value) => setSelectedProject(projects.find(p => p.name === value))} defaultValue={projects[0].name}>
         <SelectTrigger className="w-full mb-4">
           <SelectValue placeholder="Select a project" />
@@ -30,27 +29,26 @@ export function ProjectsSection() {
 
       {selectedProject && (
         <Card>
-          <CardContent className="p-6">
-          <Carousel className="w-full max-w-md mx-auto mb-6">
-  <CarouselContent>
-    {selectedProject.images && selectedProject.images.map((image, index) => (
-      <CarouselItem key={index}>
-        <div className="p-1">
-          <Image 
-            src={image} 
-            alt={`Project image ${index + 1}`} 
-            width={1200} 
-            height={800} 
-            className="rounded-md object-cover w-full h-auto"
-          />
-        </div>
-      </CarouselItem>
-    ))}
-  </CarouselContent>
-  <CarouselPrevious />
-  <CarouselNext />
-</Carousel>
-
+          <CardContent className="p-4 md:p-6">
+            <Carousel className="w-full max-w-md mx-auto mb-6">
+              <CarouselContent>
+                {selectedProject.images && selectedProject.images.map((image, index) => (
+                  <CarouselItem key={index}>
+                    <div className="p-1">
+                      <Image 
+                        src={image} 
+                        alt={`Project image ${index + 1}`} 
+                        width={1200} 
+                        height={800} 
+                        className="rounded-md object-cover w-full h-auto"
+                      />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
 
             <h3 className="text-2xl font-semibold mb-2">{selectedProject.name}</h3>
             <p className="text-gray-600 mb-4">{selectedProject.description}</p>
