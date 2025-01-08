@@ -3,11 +3,13 @@ import React from 'react';
 import { cn } from "@/lib/utils"; // Import your utility function
 import BlurFade from "@/components/ui/blur-fade"; // Import BlurFade component
 import AnimatedGridPattern from "@/components/ui/animated-grid-pattern"; // Import AnimatedGridPattern
-import { projects, experience, achievements } from "@/data/resume"; // Import projects from projects.js
+import { experience, achievements } from "@/data/resume"; // Import projects from projects.js
 import { Button } from "@/components/ui/button";
 import BoxReveal from "@/components/ui/box-reveal";
 import IconCloud from "@/components/ui/icon-cloud";
 import ShimmerButton from '@/components/ui/shimmer-button';
+import { ProjectsSection } from '@/components/ui/ProjectsSection';
+
 
 
 {/* skill cloud */}
@@ -92,26 +94,12 @@ export default function Home() {
         PROJECTS
       </h1>
       <hr className="border-t-4 border-gray-300 dark:border-gray-700 h-[300%] mb-2" />
-            
-      <div className="p-5 md:p-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 h-auto sm:h-[90vh] lg:h-[100vh]">
-        {projects.map((project, index) => (
-          <div key={index} className="bg-white p-6 rounded-lg shadow-lg h-[auto]">
-            <h3 className="font-bold text-lg sm:text-xl mb-2">{project.name}</h3>
-            <p className="text-gray-700 mb-4 text-sm sm:text-base">{project.description}</p>
-            <a 
-              href={project.githubLink} 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="text-white bg-gray-800 hover:bg-blue-600 py-2 px-4 rounded-full text-sm sm:text-base"
-            >
-              GitHub Repository
-            </a>
-          </div>
-        ))}
+      <div>
+      <ProjectsSection />
       </div>
 
       {/* Displaying Work*/}
-      <div className="p-5 md:p-10 pt-0 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 h-auto sm:h-[75vh]">
+      <div className="p-5 md:p-10 pt-0 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 h-auto sm:h-[75vh] h-auto">
         <div className="size-full max-w-lg items-center justify-center overflow-hidden pt-0 lg:h-[100vh]">
           <BoxReveal boxColor={"#000000"} duration={0.5}>
           <p className="z-10 whitespace-pre-wrap text-start text-4xl sm:text-5xl font-medium tracking-tighter text-black dark:text-white mb-1">
