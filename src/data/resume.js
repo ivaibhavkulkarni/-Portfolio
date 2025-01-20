@@ -76,10 +76,10 @@ export const projects = [
 
 export const experience = [
   {
-    jobTitle: "Freelance Web Developer",
+    jobTitle: "Freelance Full Stack Developer",
     company: "Sri Sri Academy",
     duration: "September 2024 - Present",
-    description: "I collaborated with Sri Sri Academy to design, build, and maintain their website using Strapi, ensuring a user-friendly experience and optimal functionality. By streamlining data management processes, I enhanced content update efficiency and overall website performance. Moving forward, I plan to implement additional layout changes to improve visual appeal and user interaction. Additionally, I aim to expand real-time data functionalities for greater responsiveness and user engagement, while exploring opportunities to integrate new features based on user feedback to further enrich the user experience.",
+    description: "As a Freelance Full Stack Developer for Sri Sri Academy, I have been responsible for managing and optimizing the platform's data using Strapi, ensuring seamless content updates and scalability. I spearheaded the design and implementation of a new Curriculum and Features module, which significantly enhanced the user experience by providing intuitive navigation and improved functionality. Working closely with stakeholders, I ensured that development efforts were aligned with the Academy's organizational goals and future feature plans. By utilizing Next.js, I delivered a responsive and visually appealing design that improved user engagement and accessibility across multiple devices.This project allowed me to combine my technical expertise with my ability to collaborate effectively with diverse teams, delivering a platform that meets the needs of the Academy and its users.",
     link: "https://hyderabad.ssa.org.in/"
   }
 ];
