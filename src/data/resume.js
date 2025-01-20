@@ -1,7 +1,7 @@
 export const projects = [
   {
-    name: "Employee Portal (MERN Stack)",
-    description: "Developed a secure MERN stack application with user authentication using JWT and bcrypt. Designed a dynamic dashboard for streamlined employee management, including features to add, edit, and delete records. Integrated Docker for containerized deployment and simplified environment setup.",
+    name: "Employee Management System (MERN Stack)",
+    description: "The Employee Management System is a feature-rich web application developed to simplify and optimize employee record management for businesses. Built with a robust tech stack including React.js, Express.js, Node.js, and MongoDB, it provides an intuitive interface for viewing, editing, and updating employee details. Key features include secure login for data protection, a personalized user experience with name-based greetings, and a seamless dashboard for efficient navigation. Designed for scalability and efficiency, this project automates repetitive tasks, minimizes manual errors, and ensures real-time database updates, making it an ideal solution for organizations aiming to enhance productivity and streamline operations.",
     githubLink: "https://github.com/ivaibhavkulkarni/Employee-Portal",
     technologies: ["React", "Node.js", "Express", "MongoDB", "Docker", "JWT"],
     images: [
@@ -13,7 +13,7 @@ export const projects = [
   },
   {
     name: "Green Grocer - E-commerce Platform for Organic Products",
-    description: "I developed an e-commerce platform for organic products, integrating Stripe for payments and using Next-Auth for secure user authentication. I also built an admin panel to manage sales, stock, and customer data, utilizing PostgreSQL and Prisma for efficient database management. Looking ahead, I plan to integrate DevOps practices and create a mobile version using Swift UI and Swift for iOS.",
+    description: "Developed GreenGrocer, an e-commerce web app focused on selling organic fruits, vegetables, plants, and seeds. Utilizing Next.js, TypeScript, Prisma, PostgreSQL, and NextAuth, I built a responsive and secure platform that provides an intuitive shopping experience. The app integrates Stripe for payment processing and employs Tailwind CSS and ShadCN UI for sleek, user-friendly design. As the next phase, I am developing a native iOS mobile version of the app to offer an enhanced, mobile-first shopping experience, enabling customers to shop on-the-go while enjoying features like push notifications.",
     githubLink: "https://github.com/ivaibhavkulkarni/GreenGrocer-E-commerce",
     technologies: ["Next.Js", "TypeScript", "Tailwind", "Next-Auth", "Docker", "PostgreSQL", "Prisma", "Stripe"],
     images: [
