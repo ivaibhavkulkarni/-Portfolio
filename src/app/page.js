@@ -37,6 +37,7 @@ const slugs = [
   "postgresql",
   "typescript",
   "prisma",
+  "redis",
 ];
 
 export function IconCloudDemo() {
