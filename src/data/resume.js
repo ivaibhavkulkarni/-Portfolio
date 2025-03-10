@@ -113,5 +113,32 @@ export const achievements = [
       ],
       image:"https://styles.redditmedia.com/t5_3gryx/styles/communityIcon_iegzxkwcwkmd1.png",
       link: "https://www.holopin.io/@ivaibhavkulkarni#"
-    }
+    },
+    {
+      title: "Swift community Hyderabad",
+      points: [
+        "I am an active participant in Swift Hyderabad, engaging with the local developer community to share knowledge and collaborate on the latest advancements in iOS development. As a technical speaker, I have delivered five conference talks on modern iOS development, reaching over 2,000 developers and contributing to the growth of the ecosystem by discussing best practices, emerging trends, and real-world applications."
+      ],
+      image:"https://developer.apple.com/swift/images/swift-og.png",
+      link: "https://www.linkedin.com/posts/vaibhav-kulkarni-7230051ab_iosdevelopment-swifthyderabad-networking-activity-7291444966776586240-6lHW?utm_source=share&utm_medium=member_desktop&rcm=ACoAADDx1csBCt-TmN3IgCUCG2h0lAsdH-i6ID4",
+    },
+    {
+      title: "Google developers Group Hyderabad",
+      points: [
+        "Attending Google DevFest was an incredible experience! I gained valuable insights from sessions by Haris Khan on Google Cloud, Ravi from Beckn Protocol on open protocols, and Pankaj Rai on AI Agents. I also earned a Digital Badge 🏅, explored the MSI gaming laptop, and grabbed some cool goodies! 🎁 Huge thanks to the speakers and organizers for an impactful event. Looking forward to applying my learnings! #GoogleDevFest #SwiftHyderabad #MSIIndia"
+      ],
+      image:"https://yt3.googleusercontent.com/ytc/AIdro_mQRyioMUO4VBrlP-jILdsU6_wMf1KSU9syWtUN4hmK1hg=s900-c-k-c0x00ffffff-no-rj",
+      link: "https://www.linkedin.com/posts/vaibhav-kulkarni-7230051ab_devfesthyd24-gdghyd-techinhyd-activity-7276594790320820226-1M3p?utm_source=share&utm_medium=member_desktop&rcm=ACoAADDx1csBCt-TmN3IgCUCG2h0lAsdH-i6ID4",
+    },
+    {
+      title: "Google Build with AI",
+      points: [
+        "Attending Google’s Build with AI event was an incredible experience filled with innovation, learning, and inspiring discussions. I explored how Google Cloud is revolutionizing software development and had the opportunity to engage with brilliant tech minds, exchanging ideas on the future of AI in the industry.This event not only deepened my understanding of AI but also connected me with a passionate community of like-minded innovators. Excited to apply these insights and continue exploring the limitless possibilities of AI!"
+      ],
+      image:"https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2.0,f_auto,g_center,h_1080,q_100,w_1080/v1/gcs/platform-data-goog/events/Square_7cJM368.jpg",
+      link: "https://www.linkedin.com/posts/vaibhav-kulkarni-7230051ab_googlebuildwithai-googlecloud-ai-activity-7295831937745571842-w2_Q?utm_source=share&utm_medium=member_desktop&rcm=ACoAADDx1csBCt-TmN3IgCUCG2h0lAsdH-i6ID4",
+    },
+
+
+
   ];
