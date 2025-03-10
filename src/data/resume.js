@@ -1,5 +1,16 @@
 export const projects = [
   {
+    name: "Dinosaur Explorer (iOS App)",
+    description: "Developed an iOS app that provides detailed information about various dinosaurs, allowing users to search, filter, and navigate through historical data. Implemented a search bar for easy discovery, along with sorting capabilities by alphabetical order or number of movie appearances. Designed filtering functionality based on habitat (Land, Air, Sea) and built a navigation system enabling users to tap on a dinosaur to view detailed information. Integrated external links for additional learning resources and implemented MapKit to display dinosaur locations on a map, including a satellite view for an immersive experience. Additionally, developed JSON handling to fetch dinosaur details from a structured data file.",
+    githubLink: "https://github.com/ivaibhavkulkarni/Jurassic-Park-Predators",
+    technologies: ["Swift", "SwiftUI", "MapKit", "JSON Parsing "],
+    images: [
+      "https://github.com/user-attachments/assets/80a7dd1e-5622-48ee-a4b7-a3cf0ff09c73",
+      "https://github.com/user-attachments/assets/885a45d7-79dd-4a58-9fb4-86ee21197c0c",
+      "https://github.com/user-attachments/assets/14555be2-53fa-4073-ab4f-1997638e4339",
+    ]
+  },
+  {
     name: "Employee Management System (MERN Stack)",
     description: "The Employee Management System is a feature-rich web application developed to simplify and optimize employee record management for businesses. Built with a robust tech stack including React.js, Express.js, Node.js, and MongoDB, it provides an intuitive interface for viewing, editing, and updating employee details. Key features include secure login for data protection, a personalized user experience with name-based greetings, and a seamless dashboard for efficient navigation. Designed for scalability and efficiency, this project automates repetitive tasks, minimizes manual errors, and ensures real-time database updates, making it an ideal solution for organizations aiming to enhance productivity and streamline operations.",
     githubLink: "https://github.com/ivaibhavkulkarni/Employee-Portal",
@@ -76,12 +87,20 @@ export const projects = [
 
 export const experience = [
   {
-    jobTitle: "Freelance Full Stack Developer",
+    jobTitle: "Software Developer",
     company: "Sri Sri Academy",
     duration: "September 2024 - Present",
     description: "As a Freelance Full Stack Developer for Sri Sri Academy, I have been responsible for managing and optimizing the platform's data using Strapi, ensuring seamless content updates and scalability. I spearheaded the design and implementation of a new Curriculum and Features module, which significantly enhanced the user experience by providing intuitive navigation and improved functionality. Working closely with stakeholders, I ensured that development efforts were aligned with the Academy's organizational goals and future feature plans. By utilizing Next.js, I delivered a responsive and visually appealing design that improved user engagement and accessibility across multiple devices.This project allowed me to combine my technical expertise with my ability to collaborate effectively with diverse teams, delivering a platform that meets the needs of the Academy and its users.",
-    link: "https://hyderabad.ssa.org.in/"
-  }
+    link: "https://hyderabad.ssa.org.in/",
+  },
+
+  {
+    jobTitle: "Software Developer",
+    company: "Trubot Electronics",
+    duration: "February 2025 – Present",
+    description: "Engineered a high-performance website using Next.js and Three.js, increasing product engagement by 45% and reducing bounce rates by 30%. Optimized 3D model rendering to decrease load time by 60% while maintaining visual fidelity across all devices. Implemented a CI/CD pipeline that reduced deployment time by 75%, enabling rapid iterations based on client feedback. Delivered the project 10 days ahead of schedule while exceeding all client requirements, securing a ₹15K follow-up contract.",
+    link: "https://trubot.in/",
+  },
 ];
 
 export const achievements = [
