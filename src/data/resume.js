@@ -115,7 +115,7 @@ export const achievements = [
       link: "https://www.holopin.io/@ivaibhavkulkarni#"
     },
     {
-      title: "Swift community Hyderabad",
+      title: "Swift Community Hyderabad",
       points: [
         "I am an active participant in Swift Hyderabad, engaging with the local developer community to share knowledge and collaborate on the latest advancements in iOS development. As a technical speaker, I have delivered five conference talks on modern iOS development, reaching over 2,000 developers and contributing to the growth of the ecosystem by discussing best practices, emerging trends, and real-world applications."
       ],
@@ -123,7 +123,7 @@ export const achievements = [
       link: "https://www.linkedin.com/posts/vaibhav-kulkarni-7230051ab_iosdevelopment-swifthyderabad-networking-activity-7291444966776586240-6lHW?utm_source=share&utm_medium=member_desktop&rcm=ACoAADDx1csBCt-TmN3IgCUCG2h0lAsdH-i6ID4",
     },
     {
-      title: "Google developers Group Hyderabad",
+      title: "Google Developers Group Hyderabad",
       points: [
         "Attending Google DevFest was an incredible experience! I gained valuable insights from sessions by Haris Khan on Google Cloud, Ravi from Beckn Protocol on open protocols, and Pankaj Rai on AI Agents. I also earned a Digital Badge 🏅, explored the MSI gaming laptop, and grabbed some cool goodies! 🎁 Huge thanks to the speakers and organizers for an impactful event. Looking forward to applying my learnings! #GoogleDevFest #SwiftHyderabad #MSIIndia"
       ],
