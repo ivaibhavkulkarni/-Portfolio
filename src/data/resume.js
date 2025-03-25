@@ -99,7 +99,7 @@ export const experience = [
     company: "Trubot Electronics",
     duration: "February 2025 – Present",
     description: "Engineered a high-performance website using Next.js and Three.js, increasing product engagement by 45% and reducing bounce rates by 30%. Optimized 3D model rendering to decrease load time by 60% while maintaining visual fidelity across all devices. Implemented a CI/CD pipeline that reduced deployment time by 75%, enabling rapid iterations based on client feedback. Delivered the project 10 days ahead of schedule while exceeding all client requirements, securing a ₹15K follow-up contract.",
-    link: "https://trubot.in/",
+    link: "https://tru-web.vercel.app/",
   },
 ];
 
@@ -138,7 +138,5 @@ export const achievements = [
       image:"https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2.0,f_auto,g_center,h_1080,q_100,w_1080/v1/gcs/platform-data-goog/events/Square_7cJM368.jpg",
       link: "https://www.linkedin.com/posts/vaibhav-kulkarni-7230051ab_googlebuildwithai-googlecloud-ai-activity-7295831937745571842-w2_Q?utm_source=share&utm_medium=member_desktop&rcm=ACoAADDx1csBCt-TmN3IgCUCG2h0lAsdH-i6ID4",
     },
-
-
 
   ];
