@@ -90,7 +90,7 @@ export const experience = [
     jobTitle: "Software Developer",
     company: "Sri Sri Academy",
     duration: "September 2024 - Present",
-    description: "I designed and deployed a scalable Next.js/TypeScript website that significantly enhanced user engagement, increasing daily visitor traffic by 120% and boosting conversion rates by 35%. To streamline content management, I integrated Strapi CMS with custom workflows, reducing content update time from three hours to just 20 minutes, making it accessible for non-technical staff. Additionally, I optimized website performance using Cloudflare CDN and Amazon S3, achieving 99.98% uptime and a 90+ PageSpeed score. By implementing a GA4 analytics dashboard, I identified key user patterns, leading to UX improvements that increased session duration by 40%. Furthermore, I strategically reduced server costs by 30% through the use of Nginx caching and serverless functions.",
+    description: "I designed and deployed a scalable Next.js/JavaScript website that significantly enhanced user engagement, increasing daily visitor traffic by 120% and boosting conversion rates by 35%. To streamline content management, I integrated Strapi CMS with custom workflows, reducing content update time from three hours to just 20 minutes, making it accessible for non-technical staff. Additionally, I optimized website performance using Cloudflare CDN and Amazon S3, achieving 99.98% uptime and a 90+ PageSpeed score. By implementing a GA4 analytics dashboard, I identified key user patterns, leading to UX improvements that increased session duration by 40%. Furthermore, I strategically reduced server costs by 30% through the use of Nginx caching and serverless functions.",
     link: "https://hyderabad.ssa.org.in/",
   },
 
@@ -98,7 +98,7 @@ export const experience = [
     jobTitle: "Software Developer",
     company: "Trubot Electronics",
     duration: "February 2025 – Present",
-    description: "Engineered a high-performance website using Next.js and Three.js, increasing product engagement by 45% and reducing bounce rates by 30%. Optimized 3D model rendering to decrease load time by 60% while maintaining visual fidelity across all devices. Implemented a CI/CD pipeline that reduced deployment time by 75%, enabling rapid iterations based on client feedback. Delivered the project 10 days ahead of schedule while exceeding all client requirements, securing a ₹15K follow-up contract.",
+    description: "Engineered a high-performance website using Next.js/TypeScript and Three.js, increasing product engagement by 45% and reducing bounce rates by 30%. Optimized 3D model rendering to decrease load time by 60% while maintaining visual fidelity across all devices. Implemented a CI/CD pipeline that reduced deployment time by 75%, enabling rapid iterations based on client feedback. Delivered the project 10 days ahead of schedule while exceeding all client requirements, securing a ₹15K follow-up contract.",
     link: "https://tru-web.vercel.app/",
   },
 ];

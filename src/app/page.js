@@ -78,14 +78,7 @@ export default function Home() {
           )}
         />
       </div>
-
-      <section className="py-12">
-        <h1 className="text-4xl sm:text-5xl font-medium tracking-tighter text-black dark:text-white text-center mb-8">
-          PROJECTS
-        </h1>
-        <ProjectsSection />
-      </section>
-
+      
       <section className="py-12 bg-gray-100">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl sm:text-5xl font-medium tracking-tighter text-black dark:text-white text-center mb-8">
@@ -107,6 +100,13 @@ export default function Home() {
             ))}
           </div>
         </div>
+      </section>
+
+      <section className="py-12">
+        <h1 className="text-4xl sm:text-5xl font-medium tracking-tighter text-black dark:text-white text-center mb-8">
+          PROJECTS
+        </h1>
+        <ProjectsSection />
       </section>
     
       <section className="py-12">
