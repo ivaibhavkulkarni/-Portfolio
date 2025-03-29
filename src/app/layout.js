@@ -16,7 +16,7 @@ export const metadata = {
   title: "Vaibhav's Portfolio",
   icons: {
     icon: '/img2.ico',
-    apple: '/img1.jpg',
+    apple: '/img1.png',
   },
   description: "Built by Vaibhav Kulkarni",
 };
