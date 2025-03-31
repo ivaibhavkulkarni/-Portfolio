@@ -10,6 +10,7 @@ import IconCloud from "@/components/ui/icon-cloud";
 import ShimmerButton from '@/components/ui/shimmer-button';
 import { ProjectsSection } from '@/components/ui/ProjectsSection';
 import { RainbowButton } from "@/components/magicui/rainbow-button";
+import { ArrowUp } from 'lucide-react'; // Add this import for the arrow icon
 
 // Skill cloud
 const slugs = [
@@ -54,7 +55,6 @@ function ThemeToggle() {
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
-    // Check for user's preferred color scheme
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     setIsDark(prefersDark);
     document.documentElement.classList.toggle('dark', prefersDark);
@@ -77,10 +77,52 @@ function ThemeToggle() {
   );
 }
 
+// Scroll to Top Button Component
+function ScrollToTopButton() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  // Show button when page is scrolled down
+  useEffect(() => {
+    const toggleVisibility = () => {
+      if (window.scrollY > 300) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener('scroll', toggleVisibility);
+    return () => window.removeEventListener('scroll', toggleVisibility);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
+  return (
+    <Button
+      onClick={scrollToTop}
+      className={cn(
+        "fixed bottom-4 right-4 z-50 w-12 h-12 rounded-full flex items-center justify-center transition-opacity duration-300",
+        isVisible ? "opacity-100" : "opacity-0 pointer-events-none",
+        "bg-gray-200 text-gray-800 hover:bg-gray-300",
+        "dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600"
+      )}
+      variant="outline"
+    >
+      <ArrowUp className="w-6 h-6" />
+    </Button>
+  );
+}
+
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-white dark:bg-gray-900 transition-colors duration-200">
       <ThemeToggle />
+      <ScrollToTopButton /> {/* Added scroll to top button */}
       
       <div className="relative flex h-screen w-full flex-col items-start justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl p-5 md:p-20 dark:border-gray-800">
         <BlurFade delay={0.25} inView>
