@@ -1,5 +1,5 @@
 "use client";
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { cn } from "@/lib/utils";
 import BlurFade from "@/components/ui/blur-fade";
 import AnimatedGridPattern from "@/components/ui/animated-grid-pattern";
@@ -9,8 +9,7 @@ import BoxReveal from "@/components/ui/box-reveal";
 import IconCloud from "@/components/ui/icon-cloud";
 import ShimmerButton from '@/components/ui/shimmer-button';
 import { ProjectsSection } from '@/components/ui/ProjectsSection';
-import { RainbowButton } from "@/components/magicui/rainbow-button"
-
+import { RainbowButton } from "@/components/magicui/rainbow-button";
 
 // Skill cloud
 const slugs = [
@@ -44,17 +43,46 @@ const slugs = [
 
 export function IconCloudDemo() {
   return (
-    <div className="relative flex w-full h-full items-center justify-center overflow-hidden rounded-lg bg-background px-0 py-0 pt-0 mt-0">
+    <div className="relative flex w-full h-full items-center justify-center overflow-hidden rounded-lg bg-background px-0 py-0 pt-0 mt-0 dark:bg-gray-900">
       <IconCloud iconSlugs={slugs} />
     </div>
   );
 }
 
-// Main page
+// Theme Toggle Component
+function ThemeToggle() {
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    // Check for user's preferred color scheme
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    setIsDark(prefersDark);
+    document.documentElement.classList.toggle('dark', prefersDark);
+  }, []);
+
+  const toggleTheme = () => {
+    setIsDark(!isDark);
+    document.documentElement.classList.toggle('dark');
+  };
+
+  return (
+    <Button
+      onClick={toggleTheme}
+      className="fixed top-4 right-4 md:right-4 z-50 bg-gray-200 dark:bg-gray-800 mr-4 md:mr-0 rounded-full w-12 h-12 md:w-auto md:h-auto flex items-center justify-center"
+      variant="outline"
+    >
+      <span className="md:hidden">{isDark ? '☀️' : '🌙'}</span>
+      <span className="hidden md:inline">{isDark ? '☀️ Light' : '🌙 Dark'}</span>
+    </Button>
+  );
+}
+
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen">
-      <div className="relative flex h-screen w-full flex-col items-start justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl p-5 md:p-20">
+    <div className="flex flex-col min-h-screen bg-white dark:bg-gray-900 transition-colors duration-200">
+      <ThemeToggle />
+      
+      <div className="relative flex h-screen w-full flex-col items-start justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl p-5 md:p-20 dark:border-gray-800">
         <BlurFade delay={0.25} inView>
           <p className="z-10 whitespace-pre-wrap text-start text-4xl sm:text-5xl font-medium tracking-tighter text-black dark:text-white ml-8 mb-1">
             VAIBHAV KULKARNI
@@ -62,11 +90,11 @@ export default function Home() {
         </BlurFade> 
         
         <BlurFade delay={0.25 * 2} inView>
-          <p className="ml-8 text-lg sm:text-xl">Software Engineer</p>
+          <p className="ml-8 text-lg sm:text-xl text-gray-800 dark:text-gray-200">Software Engineer</p>
         </BlurFade>
 
         <BlurFade delay={0.25 * 2} inView>
-          <p className="ml-8 text-base sm:text-lg">Turning Ideas into Scalable Digital Solutions with Expertise in MERN Stack and iOS Mobile App Development</p>
+          <p className="ml-8 text-base sm:text-lg text-gray-600 dark:text-gray-400">Turning Ideas into Scalable Digital Solutions with Expertise in MERN Stack and iOS Mobile App Development</p>
         </BlurFade>
         
         <AnimatedGridPattern
@@ -76,12 +104,12 @@ export default function Home() {
           repeatDelay={1}
           className={cn(
             "[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]",
-            "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12"
+            "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12 dark:[mask-image:radial-gradient(500px_circle_at_center,gray,transparent)]"
           )}
         />
       </div>
       
-      <section className="py-12 bg-gray-100">
+      <section className="py-12 bg-gray-100 dark:bg-gray-800">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl sm:text-5xl font-medium tracking-tighter text-black dark:text-white text-center mb-8">
             EXPERIENCE
@@ -89,11 +117,11 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {experience.map((job, index) => (
               <BoxReveal key={index} boxColor={"#000000"} duration={0.5}>
-                <div className="bg-white p-6 rounded-lg shadow-md">
-                  <h3 className="text-xl font-semibold mb-2">{job.jobTitle}</h3>
-                  <p className="text-sm mb-1">{job.company}</p>
-                  <p className="text-sm text-gray-500 mb-4">{job.duration}</p>
-                  <p className="text-sm mb-4">{job.description}</p>
+                <div className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md">
+                  <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">{job.jobTitle}</h3>
+                  <p className="text-sm mb-1 text-gray-700 dark:text-gray-300">{job.company}</p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">{job.duration}</p>
+                  <p className="text-sm mb-4 text-gray-600 dark:text-gray-300">{job.description}</p>
                   <a href={job.link} target="_blank" rel="noopener noreferrer">
                     <RainbowButton>Explore</RainbowButton>
                   </a>
@@ -104,28 +132,28 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-12">
+      <section className="py-12 bg-white dark:bg-gray-900">
         <h1 className="text-4xl sm:text-5xl font-medium tracking-tighter text-black dark:text-white text-center mb-8">
           PROJECTS
         </h1>
         <ProjectsSection />
       </section>
     
-      <section className="py-12">
+      <section className="py-12 bg-white dark:bg-gray-900">
         <h1 className="text-4xl sm:text-5xl font-medium tracking-tighter text-black dark:text-white text-center mb-8">
           SKILLS
         </h1>
         <IconCloudDemo />
       </section>
       
-      <section className="py-12 bg-gray-100">
+      <section className="py-12 bg-gray-100 dark:bg-gray-800">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl sm:text-5xl font-medium tracking-tighter text-black dark:text-white text-center mb-8">
             ACHIEVEMENTS
           </h1>
           <div className="space-y-8">
             {achievements.map((achievement, index) => (
-              <div key={index} className="flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-8 bg-white p-6 rounded-lg shadow-md">
+              <div key={index} className="flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-8 bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md">
                 <div className="w-full md:w-1/3 max-w-[200px]">
                   <img
                     src={achievement.image}
@@ -134,8 +162,8 @@ export default function Home() {
                   />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl font-semibold mb-2">{achievement.title}</h3>
-                  <div className="text-sm text-gray-700 mb-4">
+                  <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">{achievement.title}</h3>
+                  <div className="text-sm text-gray-700 dark:text-gray-300 mb-4">
                     {achievement.points.map((point, idx) => (
                       <p key={idx} className="mb-1">{point}</p>
                     ))}
@@ -144,7 +172,7 @@ export default function Home() {
                     href={achievement.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block text-white bg-gray-800 hover:bg-blue-600 py-2 px-4 rounded-full text-sm"
+                    className="inline-block text-white bg-gray-800 hover:bg-blue-600 dark:bg-gray-600 dark:hover:bg-blue-500 py-2 px-4 rounded-full text-sm"
                   >
                     Check Out
                   </a>
@@ -155,7 +183,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="bg-black text-white py-8 mt-auto">
+      <footer className="bg-black text-white py-8 mt-auto dark:bg-gray-950">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center space-y-6 md:space-y-0">
             <div className="space-y-4">
@@ -207,4 +235,3 @@ export default function Home() {
     </div>
   );
 }
-
