@@ -112,7 +112,7 @@ export default function Home() {
       </section>
     
       <section className="py-12">
-        <h1 className="text-4xl sm:text-5xl font-medium tracking-tighter text-black dark:text-white text-center mb-8 bg-gray-100">
+        <h1 className="text-4xl sm:text-5xl font-medium tracking-tighter text-black dark:text-white text-center mb-8">
           SKILLS
         </h1>
         <IconCloudDemo />
