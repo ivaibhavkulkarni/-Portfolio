@@ -13,12 +13,12 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "Vaibhav's Portfolio",
+  title: "Vaibhav Kulkarni - Portfolio",
   icons: {
     icon: '/img2.ico',
     apple: '/img1.png',
   },
-  description: "Built by Vaibhav Kulkarni",
+  description: "Explore Vaibhav Kulkarni's portfolio - a Software Engineer specializing in MERN stack and iOS development, showcasing projects and skills.",
 };
 
 export default function RootLayout({ children }) {
