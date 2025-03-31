@@ -9,6 +9,8 @@ import BoxReveal from "@/components/ui/box-reveal";
 import IconCloud from "@/components/ui/icon-cloud";
 import ShimmerButton from '@/components/ui/shimmer-button';
 import { ProjectsSection } from '@/components/ui/ProjectsSection';
+import { RainbowButton } from "@/components/magicui/rainbow-button"
+
 
 // Skill cloud
 const slugs = [
@@ -93,7 +95,7 @@ export default function Home() {
                   <p className="text-sm text-gray-500 mb-4">{job.duration}</p>
                   <p className="text-sm mb-4">{job.description}</p>
                   <a href={job.link} target="_blank" rel="noopener noreferrer">
-                    <Button className="bg-[#000000] text-sm">Explore</Button>
+                    <RainbowButton>Explore</RainbowButton>
                   </a>
                 </div>
               </BoxReveal>
@@ -110,7 +112,7 @@ export default function Home() {
       </section>
     
       <section className="py-12">
-        <h1 className="text-4xl sm:text-5xl font-medium tracking-tighter text-black dark:text-white text-center mb-8">
+        <h1 className="text-4xl sm:text-5xl font-medium tracking-tighter text-black dark:text-white text-center mb-8 bg-gray-100">
           SKILLS
         </h1>
         <IconCloudDemo />
