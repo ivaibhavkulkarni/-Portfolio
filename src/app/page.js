@@ -226,54 +226,68 @@ export default function Home() {
       </section>
 
       <footer className="bg-black text-white py-8 mt-auto dark:bg-gray-950">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-center space-y-6 md:space-y-0">
-            <div className="space-y-4">
-              <h4 className="font-semibold text-lg">Contact</h4>
-              <p>
-                Email:
-                <a 
-                  href="mailto:vaibhav.kulkarni0359@gmail.com" 
-                  className="text-blue-500 underline ml-1"
-                >
-                  vaibhav.kulkarni0359@gmail.com
-                </a>
-              </p>
-              <p>Phone: +91 95050 40359</p>
-            </div>
-            <div className="space-y-4">
-              <h4 className="font-semibold text-lg">Profiles</h4>
-              <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4">
-                <a href="https://www.linkedin.com/in/vaibhav-kulkarni-7230051ab/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">
-                  LinkedIn
-                </a>
-                <a href="https://leetcode.com/u/user7623xD/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">
-                  LeetCode
-                </a>
-                <a href="https://github.com/ivaibhavkulkarni" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">
-                  GitHub
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="mt-8 text-center">
-            <a 
-              href="/resume.pdf" 
-              download="VAIBHAV_RESUME.pdf" 
-              className="inline-block"
-            >
-              <ShimmerButton>
-                <span className="text-sm font-medium text-white lg:text-lg">
-                  Download Resume
-                </span>
-              </ShimmerButton>
-            </a>
-          </div>
-          <div className="text-center mt-6">
-            <p className="text-sm">© {new Date().getFullYear()} Vaibhav Kulkarni. All rights reserved.</p>
-          </div>
+  <div className="container mx-auto px-4">
+    <div className="flex flex-col md:flex-row justify-between items-start md:items-center space-y-6 md:space-y-0">
+      <div className="space-y-4">
+        <h4 className="font-semibold text-lg">Contact</h4>
+        <p>
+          Email:
+          <a 
+            href="mailto:vaibhav.kulkarni0359@gmail.com" 
+            className="text-blue-500 underline ml-1"
+          >
+            vaibhav.kulkarni0359@gmail.com
+          </a>
+        </p>
+        <p>Phone: +91 95050 40359</p>
+      </div>
+      <div className="space-y-4">
+        <h4 className="font-semibold text-lg">Profiles</h4>
+        <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4">
+          <a href="https://www.linkedin.com/in/vaibhav-kulkarni-7230051ab/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">
+            LinkedIn
+          </a>
+          <a href="https://leetcode.com/u/user7623xD/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">
+            LeetCode
+          </a>
+          <a href="https://github.com/ivaibhavkulkarni" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">
+            GitHub
+          </a>
         </div>
-      </footer>
+      </div>
+    </div>
+    <div className="mt-8 text-center">
+      {/* Adjusted button container for mobile */}
+      <div className="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4 justify-center">
+        <a 
+          href="/Vaibhav_SDE_Resume.pdf" 
+          download="Vaibhav_SDE_Resume.pdf" 
+          className="inline-block w-full md:w-auto"
+        >
+          <ShimmerButton>
+            <span className="text-sm font-medium text-white lg:text-lg">
+              Download SDE Resume
+            </span>
+          </ShimmerButton>
+        </a>
+        <a 
+          href="/Vaibhav_iOS_Resume.pdf" 
+          download="Vaibhav_iOS_Resume.pdf" 
+          className="inline-block w-full md:w-auto"
+        >
+          <ShimmerButton>
+            <span className="text-sm font-medium text-white lg:text-lg">
+              Download iOS Resume
+            </span>
+          </ShimmerButton>
+        </a>
+      </div>
+    </div>
+    <div className="text-center mt-6">
+      <p className="text-sm">© {new Date().getFullYear()} Vaibhav Kulkarni. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
     </div>
   );
 }
