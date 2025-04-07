@@ -112,7 +112,7 @@ export const achievements = [
        "Earned prestigious Hacktoberfest badges, reflecting dedication to continuous learning and active community involvement.",
       ],
       image:"https://styles.redditmedia.com/t5_3gryx/styles/communityIcon_iegzxkwcwkmd1.png",
-      link: "https://www.holopin.io/@ivaibhavkulkarni#"
+      link: "https://www.holopin.io/@ivaibhavkulkarni#badges"
     },
     {
       title: "Swift Community Hyderabad",
