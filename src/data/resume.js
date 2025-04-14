@@ -89,7 +89,7 @@ export const experience = [
   {
     jobTitle: "Software Developer",
     company: "Sri Sri Academy",
-    duration: "September 2024 - Present",
+    duration: "September 2024 - April 2025",
     description: "I designed and deployed a scalable Next.js/JavaScript website that significantly enhanced user engagement, increasing daily visitor traffic by 120% and boosting conversion rates by 35%. To streamline content management, I integrated Strapi CMS with custom workflows, reducing content update time from three hours to just 20 minutes, making it accessible for non-technical staff. Additionally, I optimized website performance using Cloudflare CDN and Amazon S3, achieving 99.98% uptime and a 90+ PageSpeed score. By implementing a GA4 analytics dashboard, I identified key user patterns, leading to UX improvements that increased session duration by 40%. Furthermore, I strategically reduced server costs by 30% through the use of Nginx caching and serverless functions.",
     link: "https://hyderabad.ssa.org.in/",
   },
@@ -101,6 +101,13 @@ export const experience = [
     description: "Engineered a high-performance website using Next.js/TypeScript and Three.js, increasing product engagement by 45% and reducing bounce rates by 30%. Optimized 3D model rendering to decrease load time by 60% while maintaining visual fidelity across all devices. Implemented a CI/CD pipeline that reduced deployment time by 75%, enabling rapid iterations based on client feedback. Delivered the project 10 days ahead of schedule while exceeding all client requirements, securing a ₹15K follow-up contract.",
     link: "https://tru-web.vercel.app/",
   },
+  {
+    jobTitle: "Full-Stack Developer",
+    company: "ChalamSoft",
+    duration: "April 2025 - Present",
+    description:"As a freelance Full Stack Developer at ChalamSoft, an IT staffing and services company, I developed a fully responsive, production-ready job listing platform. Leveraging Next.js for the frontend and Supabase for backend services, including database and authentication, I designed and implemented a scalable and efficient database schema to manage job listings effectively. I enabled administrators to easily add or remove job posts directly from the Supabase dashboard without needing any code changes. The project emphasized seamless integration between the frontend and backend, resulting in optimized performance and a smooth, intuitive user experience. I delivered a clean, modern UI that caters to both job seekers and administrative users.",
+    link: "https://chalamsoft-website-qakc.vercel.app/",
+  }
 ];
 
 export const achievements = [
