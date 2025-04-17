@@ -5,7 +5,7 @@ export const projects = [
     githubLink: "https://tree-map-hyderabad.vercel.app/",
     technologies: ["Next.Js", "Supabase", "Google Map API", "Vercel"],
     images: [
-      "https://drive.google.com/drive/folders/1TA9WyGEhA_HB4zjyM4moFrsGu2KLA-o1?usp=sharing",
+      "https://drive.google.com/file/d/195dlM8_DGXhq-FQTm4t3GYbyV7sGWDev/view?usp=drive_link",
     ]
   },
   {
