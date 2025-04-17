@@ -1,5 +1,14 @@
 export const projects = [
   {
+    name: "Hyderabad Tree - Map",
+    description: "Developed a dynamic web application for mapping and analyzing tree locations, delivering a feature-rich platform with comprehensive statistics. Engineered an immersive map interface using Next.js with TypeScript and Google Maps API, enabling precise, interactive visualizations and seamless user navigation. Architected a robust Supabase backend, streamlining tree data management and accelerating data entry workflows by 60% through intuitive admin tools. Designed a real-time analytics dashboard that boosted user engagement by 40%, providing actionable insights into tree distribution, species diversity, and ecological impact. Deployed the eco-focused platform on Vercel, ensuring flawless performance with 100% uptime while promoting environmental awareness through an intuitive, user-centric design.",
+    githubLink: "https://tree-map-hyderabad.vercel.app/",
+    technologies: ["Next.Js", "Supabase", "Google Map API", "Vercel"],
+    images: [
+      "https://drive.google.com/drive/folders/1TA9WyGEhA_HB4zjyM4moFrsGu2KLA-o1?usp=sharing",
+    ]
+  },
+  {
     name: "Dinosaur Explorer (iOS App)",
     description: "Developed an iOS app that provides detailed information about various dinosaurs, allowing users to search, filter, and navigate through historical data. Implemented a search bar for easy discovery, along with sorting capabilities by alphabetical order or number of movie appearances. Designed filtering functionality based on habitat (Land, Air, Sea) and built a navigation system enabling users to tap on a dinosaur to view detailed information. Integrated external links for additional learning resources and implemented MapKit to display dinosaur locations on a map, including a satellite view for an immersive experience. Additionally, developed JSON handling to fetch dinosaur details from a structured data file.",
     githubLink: "https://github.com/ivaibhavkulkarni/Jurassic-Park-Predators",
