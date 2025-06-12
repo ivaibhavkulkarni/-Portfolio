@@ -66,6 +66,7 @@ function ThemeToggle() {
   };
 
   return (
+    
     <Button
       onClick={toggleTheme}
       className="fixed top-4 right-4 md:right-4 z-50 bg-gray-200 dark:bg-gray-800 mr-4 md:mr-0 rounded-full w-12 h-12 md:w-auto md:h-auto flex items-center justify-center"
@@ -74,6 +75,8 @@ function ThemeToggle() {
       <span className="md:hidden">{isDark ? '☀️' : '🌙'}</span>
       <span className="hidden md:inline">{isDark ? '☀️ Light' : '🌙 Dark'}</span>
     </Button>
+    
+   
   );
 }
 
@@ -260,13 +263,13 @@ export default function Home() {
       {/* Adjusted button container for mobile */}
       <div className="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4 justify-center">
         <a 
-          href="/Vaibhav_SDE_Resume.pdf" 
-          download="Vaibhav_SDE_Resume.pdf" 
+          href="/Vaibhav_Software_Engineer_Resume.pdf" 
+          download="Vaibhav_Software_Engineer_Resume.pdf" 
           className="inline-block w-full md:w-auto"
         >
           <ShimmerButton>
             <span className="text-sm font-medium text-white lg:text-lg">
-              Download SDE Resume
+              Download SWE Resume
             </span>
           </ShimmerButton>
         </a>
