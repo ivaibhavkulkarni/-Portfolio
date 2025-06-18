@@ -274,8 +274,8 @@ export default function Home() {
           </ShimmerButton>
         </a>
         <a 
-          href="/Vaibhav_iOS_Resume.pdf" 
-          download="Vaibhav_iOS_Resume.pdf" 
+          href="/Vaibhav_iOS_Developer_Resume.pdf" 
+          download="Vaibhav_iOS_Developer_Resume.pdf" 
           className="inline-block w-full md:w-auto"
         >
           <ShimmerButton>
