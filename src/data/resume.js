@@ -1,5 +1,35 @@
 export const projects = [
   {
+    name: "PrepWise AI",
+    description: "PrepWise AI is an AI-powered interview preparation platform designed to help developers ace technical interviews. It provides personalized interview questions, detailed explanations, and a customizable learning experience tailored to your role, experience level, and preferred tech stack.",
+    githubLink: "https://prep-wise-ai-five.vercel.app/",
+    technologies: ["Node.Js", "MongoDB", "React + Vite", "Express", "Gemini AI API","Render", "Vercel"],
+    images: [
+      "https://github.com/user-attachments/assets/626c1b35-a15b-4b00-9117-6b69563af593",
+      "https://github.com/user-attachments/assets/a65fc9fc-6edb-4c45-99b5-7bae000de999",
+    ]
+  },
+  {
+    name: "Harry Potter Trivia",
+    description: "HPTrivia is a SwiftUI-based iOS application designed for fans of the Harry Potter series. The app offers an engaging trivia game where players can test their knowledge of the Harry Potter books through a variety of questions, interactive gameplay, and in-app purchases to unlock additional content. The app features a visually appealing interface with animations, audio effects, and a user-friendly design.",
+    githubLink:"https://github.com/ivaibhavkulkarni/HarryPotter_Trivia",
+    technologies:["Swift","SwiftUI","AVFoundation"],
+    images: [
+      ""
+    ]
+  },
+  {
+    name: "Pokemon Dex",
+    description: "Dex is a SwiftUI-based iOS application that serves as a Pokémon Pokedex, allowing users to browse, search, and manage details of Pokémon from the first generation (up to Pokémon #151). The app fetches data from the PokéAPI, stores it locally using CoreData, and provides a rich user experience with features like favoriting Pokémon, dynamic search, and interactive widgets built with WidgetKit and SwiftData",
+    githubLink:"https://github.com/ivaibhavkulkarni/Pokemon_Dex",
+    technologies:["Swift", "SwiftUI","WidgetKit", "swiftData"],
+    images: [ "https://github.com/user-attachments/assets/f9cf3fb9-9b64-42ee-9976-6be06afcedbf",
+      "https://github.com/user-attachments/assets/60e4c8e5-6180-40a1-ab3c-850b0948dacd" ,
+      "https://github.com/user-attachments/assets/b89480c7-88e4-4226-8650-0011f585a1fc"
+      
+    ]
+  },
+  {
     name: "Hyderabad Tree - Map",
     description: "Developed a dynamic web application for mapping and analyzing tree locations, delivering a feature-rich platform with comprehensive statistics. Engineered an immersive map interface using Next.js with TypeScript and Google Maps API, enabling precise, interactive visualizations and seamless user navigation. Architected a robust Supabase backend, streamlining tree data management and accelerating data entry workflows by 60% through intuitive admin tools. Designed a real-time analytics dashboard that boosted user engagement by 40%, providing actionable insights into tree distribution, species diversity, and ecological impact. Deployed the eco-focused platform on Vercel, ensuring flawless performance with 100% uptime while promoting environmental awareness through an intuitive, user-centric design.",
     githubLink: "https://tree-map-hyderabad.vercel.app/",
