@@ -126,18 +126,18 @@ export const projects = [
 
 export const experience = [
   {
+    jobTitle: "Software Developer",
+    company: "Trubot Electronics",
+    duration: "February 2025 – Present",
+    description: "Developed a B2B and B2C CRM system for mobile repair and retail businesses using MongoDB, Express, React (Vite), and Node.js. Integrated the Gemini API to deliver business insights and AI-powered invoice generation. Implemented modules for billing, job sheets, inventory management, and analytics to streamline operations. Enabled customer data management and real-time repair status tracking through APIs to improve efficiency and accuracy.",
+    link: "https://holaio-ai-1.onrender.com",
+  },
+  {
     jobTitle: "Full-Stack Developer",
     company: "ChalamSoft",
     duration: "April 2025 - Present",
     description:"Developed a fully responsive, production-ready job listing platform for Chalam Soft, an IT staffing and services company, using Next.js for the frontend and Supabase for backend services including database management and authentication. Designed a scalable schema in Supabase to dynamically manage and display job postings, allowing the admin to add or remove posts directly via the Supabase dashboard without code changes. Deployed the platform on Vercel for seamless performance and global availability. Delivered a clean, modern UI optimized for both job seekers and administrative users, ensuring smooth integration between frontend and backend with a focus on performance and user experience.",
     link: "https://chalamsoft-website-qakc.vercel.app/",
-  },
-  {
-    jobTitle: "Software Developer",
-    company: "Trubot Electronics",
-    duration: "February 2025 – Present",
-    description: "Engineered a high-performance website using Next.js/TypeScript and Three.js, increasing product engagement by 45% and reducing bounce rates by 30%. Optimized 3D model rendering to decrease load time by 60% while maintaining visual fidelity across all devices. Implemented a CI/CD pipeline that reduced deployment time by 75%, enabling rapid iterations based on client feedback. Delivered the project 10 days ahead of schedule while exceeding all client requirements, securing a ₹15K follow-up contract.",
-    link: "https://tru-web.vercel.app/",
   },
   {
     jobTitle: "Software Developer",
