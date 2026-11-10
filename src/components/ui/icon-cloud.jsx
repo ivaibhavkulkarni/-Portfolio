@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useId, useMemo, useState } from "react";
 import { useTheme } from "next-themes";
 import { Cloud, fetchSimpleIcons, renderSimpleIcon } from "react-icon-cloud";
 
@@ -51,6 +51,8 @@ export const renderCustomIcon = (icon, theme) => {
 
 export default function IconCloud({ iconSlugs = [], imageArray = [] }) {
   const [data, setData] = useState(null);
+  // Stable across server and client; without it Cloud generates a random id and hydration mismatches.
+  const cloudId = useId().replace(/:/g, "");
   const { theme, resolvedTheme } = useTheme();
   
   // Use resolvedTheme as fallback if theme isn't set yet
@@ -71,7 +73,7 @@ export default function IconCloud({ iconSlugs = [], imageArray = [] }) {
   }, [data, currentTheme]);
 
   return (
-    <Cloud {...cloudProps}>
+    <Cloud {...cloudProps} id={cloudId}>
       {renderedIcons}
       {imageArray.length > 0 &&
         imageArray.map((image, index) => (
