@@ -1,9 +1,16 @@
 export const projects = [
   {
+    name: "ElizaOS Agent - AI Career Counsellor",
+    description: "A task-oriented AI agent built with ElizaOS that delivers personalized career guidance. It integrates prompts, tools, conversational memory, and multi-step task orchestration, applying agent orchestration patterns aligned with Azure AI Foundry to handle multi-step career-planning scenarios end to end.",
+    githubLink: "https://github.com/ivaibhavkulkarni/eliza-career-counselor",
+    technologies: ["ElizaOS", "AI Agents", "Agent Orchestration", "Tool Calling", "Conversational Memory", "Azure AI Foundry"],
+    images: []
+  },
+  {
     name: "PrepWise AI",
-    description: "PrepWise AI is an AI-powered interview preparation platform designed to help developers ace technical interviews. It provides personalized interview questions, detailed explanations, and a customizable learning experience tailored to your role, experience level, and preferred tech stack.",
+    description: "An AI-driven interview preparation platform built on the MERN stack. It uses Google Gemini LLMs to generate dynamic interview Q&A tailored to your role, experience level, and tech stack. Prompt engineering and JSON structured outputs run behind secure backend APIs for consistent responses, and the AI services are deployed to production with authentication, logging, and monitoring.",
     githubLink: "https://prep-wise-ai-five.vercel.app/",
-    technologies: ["Node.Js", "MongoDB", "React + Vite", "Express", "Gemini AI API","Render", "Vercel"],
+    technologies: ["Google Gemini", "Prompt Engineering", "Structured Outputs", "Node.js", "Express", "MongoDB", "React + Vite", "Render", "Vercel"],
     images: [
       "https://github.com/user-attachments/assets/626c1b35-a15b-4b00-9117-6b69563af593",
       "https://github.com/user-attachments/assets/a65fc9fc-6edb-4c45-99b5-7bae000de999",
@@ -126,51 +133,95 @@ export const projects = [
 
 export const experience = [
   {
-    jobTitle: "Software Developer",
+    jobTitle: "Associate AI Software Engineer",
+    company: "Cloud Security Web",
+    duration: "October 2025 – Present",
+    points: [
+      "Engineered a production-grade cross-platform Electron.js application (Windows/macOS) for real-time medical speech transcription and EHR integration, used by clinicians in production.",
+      "Integrated NVIDIA Parakeet TDT 0.6B-v2 INT8 ASR, pyannote, and 3D-Speaker via sherpa-onnx, enabling CPU-only ONNX inference for production workloads with lower latency and no GPU dependency.",
+      "Built a real-time speaker diarization pipeline covering ML inference, speaker tracking, result processing, and live visualization.",
+      "Architected and deployed a scalable AI inference platform on Azure Container Apps and Service Bus, with on-demand transcription workers, distributed processing, and fault isolation that scales across concurrent sessions while reducing infrastructure cost.",
+      "Designed a secure, low-latency AI application architecture using AudioWorklet, sandboxed Electron IPC, AES-256-GCM, and safeStorage, with data-protection controls for sensitive clinical data.",
+      "Implemented OpenTelemetry observability and maintained 80–90% automated test coverage across unit, integration, performance, and accessibility testing.",
+    ],
+  },
+  {
+    jobTitle: "AI Software Engineer",
     company: "Trubot Electronics",
-    duration: "February 2025 – Present",
-    description: "Developed a B2B and B2C CRM system for mobile repair and retail businesses using MongoDB, Express, React (Vite), and Node.js. Integrated the Gemini API to deliver business insights and AI-powered invoice generation. Implemented modules for billing, job sheets, inventory management, and analytics to streamline operations. Enabled customer data management and real-time repair status tracking through APIs to improve efficiency and accuracy.",
+    duration: "February 2024 – February 2026",
+    points: [
+      "Designed and built a production ERP/POS platform from scratch, owning frontend, backend, database architecture, authentication, business workflows, AI integration, reporting, and deployment.",
+      "Architected a multi-provider LLM platform using self-hosted Ollama (Qwen/Nemotron) and Google Gemini, with provider abstraction, model routing, automatic failover, retries, and configurable inference workflows.",
+      "Built multimodal document intelligence that extracts structured inventory data from PDFs, images, and XLSX files, automating bulk inventory creation and cutting manual data entry.",
+      "Developed core ERP/POS workflows spanning repair management, inventory, sales, returns, invoicing, customer/supplier management, attendance, payroll, and financial reporting across multiple store locations.",
+      "Designed a unified inventory architecture across retail and repair workflows and implemented JWT authentication with RBAC for Owner, Receptionist, Incharge, and Technician roles.",
+      "Built financial aggregation and document automation pipelines for revenue, COGS, gross-profit reporting, invoices, receipts, and email delivery, using React, FastAPI, REST APIs, SQLite, and Node.js.",
+    ],
     link: "https://holaio-ai-1.onrender.com",
   },
+];
+
+export const skills = [
   {
-    jobTitle: "Full-Stack Developer",
-    company: "ChalamSoft",
-    duration: "April 2025 - Present",
-    description:"Developed a fully responsive, production-ready job listing platform for Chalam Soft, an IT staffing and services company, using Next.js for the frontend and Supabase for backend services including database management and authentication. Designed a scalable schema in Supabase to dynamically manage and display job postings, allowing the admin to add or remove posts directly via the Supabase dashboard without code changes. Deployed the platform on Vercel for seamless performance and global availability. Delivered a clean, modern UI optimized for both job seekers and administrative users, ensuring smooth integration between frontend and backend with a focus on performance and user experience.",
-    link: "https://chalamsoft-website-qakc.vercel.app/",
+    category: "AI Engineering & Generative AI",
+    items: ["LLM application development", "AI agents & agent orchestration", "MCP", "RAG", "Prompt engineering", "Structured outputs", "Function/tool calling", "Contextual memory", "Semantic search", "Vector embeddings", "Document intelligence", "Multimodal AI", "Model evaluation", "AI observability", "Inference optimization"],
   },
   {
-    jobTitle: "Software Developer",
-    company: "Sri Sri Academy",
-    duration: "September 2024 - April 2025",
-    description: "I designed and deployed a scalable Next.js/JavaScript website that significantly enhanced user engagement, increasing daily visitor traffic by 120% and boosting conversion rates by 35%. To streamline content management, I integrated Strapi CMS with custom workflows, reducing content update time from three hours to just 20 minutes, making it accessible for non-technical staff. Additionally, I optimized website performance using Cloudflare CDN and Amazon S3, achieving 99.98% uptime and a 90+ PageSpeed score. By implementing a GA4 analytics dashboard, I identified key user patterns, leading to UX improvements that increased session duration by 40%. Furthermore, I strategically reduced server costs by 30% through the use of Nginx caching and serverless functions.",
-    link: "https://hyderabad.ssa.org.in/",
+    category: "AI/ML Frameworks",
+    items: ["PyTorch", "TensorFlow", "Scikit-learn", "Hugging Face Transformers", "LangChain", "LangGraph", "LlamaIndex", "ElizaOS", "MLflow"],
+  },
+  {
+    category: "Cloud & MLOps",
+    items: ["Microsoft Azure", "Azure AI Foundry", "Azure OpenAI", "Azure Container Apps", "Azure Service Bus", "Azure Kubernetes Service", "Azure Application Insights", "Docker", "CI/CD", "Apache Airflow", "ETL pipelines", "Data pipelines", "Model deployment", "Model monitoring", "GCP", "Agent Development Kit (ADK)"],
+  },
+  {
+    category: "Backend & APIs",
+    items: ["Python", "FastAPI", "Node.js", "Express.js", "REST APIs", "JSON", "API development", "API integrations", "Enterprise workflows"],
+  },
+  {
+    category: "Data & Databases",
+    items: ["Pandas", "NumPy", "PySpark", "PostgreSQL", "MongoDB", "Redis", "Supabase", "Azure Cosmos DB", "Vector databases"],
+  },
+  {
+    category: "Programming Languages",
+    items: ["Python", "JavaScript", "TypeScript", "C", "C++", "CUDA"],
+  },
+  {
+    category: "Development & Engineering",
+    items: ["Git", "GitHub", "Agile/Scrum", "SDLC", "Testing", "Debugging", "Monitoring", "Production deployment & maintenance"],
+  },
+];
+
+export const education = [
+  {
+    degree: "Bachelor of Engineering - Information Technology",
+    grade: "CGPA: 6.18",
+    institution: "Maturi Venkata Subba Rao College, Osmania University",
+    location: "Hyderabad, Telangana",
+    duration: "June 2018 – May 2022",
   },
 ];
 
 export const achievements = [
     {
-      title: "HacktoberFest 2024 Participation",
+      title: "Hacktoberfest 2024 Contributor",
       points: [
-        " Demonstrated a strong commitment to open-source development by contributing to multiple MERN stack projects during Hacktoberfest.", 
-       "Successfully merged over four pull requests, showcasing effective team collaboration and adherence to best coding practices.",
-       "Earned prestigious Hacktoberfest badges, reflecting dedication to continuous learning and active community involvement.",
+        "Merged 4+ pull requests in MERN open-source projects.",
+        "Earned Hacktoberfest badges for open-source contributions.",
       ],
       image:"https://styles.redditmedia.com/t5_3gryx/styles/communityIcon_iegzxkwcwkmd1.png",
       link: "https://www.holopin.io/@ivaibhavkulkarni#badges"
     },
     {
-      title: "Swift Community Hyderabad",
+      title: "Mentorship",
       points: [
-        "I am an active participant in Swift Hyderabad, engaging with the local developer community to share knowledge and collaborate on the latest advancements in iOS development. As a technical speaker, I have delivered five conference talks on modern iOS development, reaching over 2,000 developers and contributing to the growth of the ecosystem by discussing best practices, emerging trends, and real-world applications."
+        "Conducted coding and software engineering workshops for 50+ junior developers, providing technical guidance on application development, debugging, and engineering practices.",
       ],
-      image:"https://developer.apple.com/swift/images/swift-og.png",
-      link: "https://www.linkedin.com/posts/vaibhav-kulkarni-7230051ab_iosdevelopment-swifthyderabad-networking-activity-7291444966776586240-6lHW?utm_source=share&utm_medium=member_desktop&rcm=ACoAADDx1csBCt-TmN3IgCUCG2h0lAsdH-i6ID4",
     },
     {
       title: "Google Developers Group Hyderabad",
       points: [
-        "Attending Google DevFest was an incredible experience! I gained valuable insights from sessions by Haris Khan on Google Cloud, Ravi from Beckn Protocol on open protocols, and Pankaj Rai on AI Agents. I also earned a Digital Badge 🏅, explored the MSI gaming laptop, and grabbed some cool goodies! 🎁 Huge thanks to the speakers and organizers for an impactful event. Looking forward to applying my learnings! #GoogleDevFest #SwiftHyderabad #MSIIndia"
+        "Active participant in GDG Hyderabad. At Google DevFest I attended sessions on Google Cloud, open protocols (Beckn), and AI agents, and earned a DevFest digital badge.",
       ],
       image:"https://yt3.googleusercontent.com/ytc/AIdro_mQRyioMUO4VBrlP-jILdsU6_wMf1KSU9syWtUN4hmK1hg=s900-c-k-c0x00ffffff-no-rj",
       link: "https://www.linkedin.com/posts/vaibhav-kulkarni-7230051ab_devfesthyd24-gdghyd-techinhyd-activity-7276594790320820226-1M3p?utm_source=share&utm_medium=member_desktop&rcm=ACoAADDx1csBCt-TmN3IgCUCG2h0lAsdH-i6ID4",
@@ -178,10 +229,9 @@ export const achievements = [
     {
       title: "Google Build with AI",
       points: [
-        "Attending Google’s Build with AI event was an incredible experience filled with innovation, learning, and inspiring discussions. I explored how Google Cloud is revolutionizing software development and had the opportunity to engage with brilliant tech minds, exchanging ideas on the future of AI in the industry.This event not only deepened my understanding of AI but also connected me with a passionate community of like-minded innovators. Excited to apply these insights and continue exploring the limitless possibilities of AI!"
+        "Participated in Google's Build with AI event, exploring how Google Cloud and generative AI are reshaping software development and exchanging ideas with the developer community on the future of AI.",
       ],
       image:"https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2.0,f_auto,g_center,h_1080,q_100,w_1080/v1/gcs/platform-data-goog/events/Square_7cJM368.jpg",
       link: "https://www.linkedin.com/posts/vaibhav-kulkarni-7230051ab_googlebuildwithai-googlecloud-ai-activity-7295831937745571842-w2_Q?utm_source=share&utm_medium=member_desktop&rcm=ACoAADDx1csBCt-TmN3IgCUCG2h0lAsdH-i6ID4",
     },
-
   ];

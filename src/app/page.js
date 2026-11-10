@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { cn } from "@/lib/utils";
 import BlurFade from "@/components/ui/blur-fade";
 import AnimatedGridPattern from "@/components/ui/animated-grid-pattern";
-import { experience, achievements } from "@/data/resume";
+import { experience, achievements, skills, education } from "@/data/resume";
 import { Button } from "@/components/ui/button";
 import BoxReveal from "@/components/ui/box-reveal";
 import IconCloud from "@/components/ui/icon-cloud";
@@ -15,31 +15,42 @@ import { ArrowUp } from 'lucide-react'; // Add this import for the arrow icon
 // Skill cloud
 const slugs = [
   "python",
-  "javascript",
-  "java",
-  "react",
-  "html5",
-  "css3",
+  "pytorch",
+  "tensorflow",
+  "scikitlearn",
+  "huggingface",
+  "langchain",
+  "mlflow",
+  "ollama",
+  "googlegemini",
+  "onnx",
+  "nvidia",
+  "jupyter",
+  "fastapi",
   "nodedotjs",
   "express",
+  "electron",
+  "react",
   "nextdotjs",
-  "vercel",
   "docker",
+  "kubernetes",
+  "apacheairflow",
+  "googlecloud",
+  "opentelemetry",
+  "githubactions",
+  "pandas",
+  "numpy",
+  "apachespark",
+  "postgresql",
+  "mongodb",
+  "redis",
+  "supabase",
+  "javascript",
+  "typescript",
+  "c",
+  "cplusplus",
   "git",
   "github",
-  "visualstudiocode",
-  "swift",
-  "xcode",
-  "mongodb",
-  "mysql",
-  "postman",
-  "ubuntu",
-  "amazonaws",
-  "tailwindcss",
-  "postgresql",
-  "typescript",
-  "prisma",
-  "redis",
 ];
 
 export function IconCloudDemo() {
@@ -135,11 +146,11 @@ export default function Home() {
         </BlurFade>
 
         <BlurFade delay={0.25 * 2} inView>
-          <p className="ml-8 text-lg sm:text-xl text-gray-800 dark:text-gray-200">Software Engineer</p>
+          <p className="ml-8 text-lg sm:text-xl text-gray-800 dark:text-gray-200">AI Engineer</p>
         </BlurFade>
 
         <BlurFade delay={0.25 * 2} inView>
-          <p className="ml-8 text-base sm:text-lg text-gray-600 dark:text-gray-400">Turning Ideas into Scalable Digital Solutions with Expertise in MERN Stack and iOS Mobile App Development</p>
+          <p className="ml-8 text-base sm:text-lg text-gray-600 dark:text-gray-400">Building production AI systems: LLM platforms, AI agents, real-time speech and document intelligence, from model inference to cloud deployment.</p>
         </BlurFade>
 
         <AnimatedGridPattern
@@ -159,17 +170,23 @@ export default function Home() {
           <h1 className="text-4xl sm:text-5xl font-medium tracking-tighter text-black dark:text-white text-center mb-8">
             EXPERIENCE
           </h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {experience.map((job, index) => (
               <BoxReveal key={index} boxColor={"#000000"} duration={0.5}>
                 <div className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md">
                   <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">{job.jobTitle}</h3>
                   <p className="text-sm mb-1 text-gray-700 dark:text-gray-300">{job.company}</p>
                   <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">{job.duration}</p>
-                  <p className="text-sm mb-4 text-gray-600 dark:text-gray-300">{job.description}</p>
-                  <a href={job.link} target="_blank" rel="noopener noreferrer">
-                    <RainbowButton>Explore</RainbowButton>
-                  </a>
+                  <ul className="list-disc pl-5 space-y-2 text-sm mb-4 text-gray-600 dark:text-gray-300">
+                    {job.points.map((point, idx) => (
+                      <li key={idx}>{point}</li>
+                    ))}
+                  </ul>
+                  {job.link && (
+                    <a href={job.link} target="_blank" rel="noopener noreferrer">
+                      <RainbowButton>Explore</RainbowButton>
+                    </a>
+                  )}
                 </div>
               </BoxReveal>
             ))}
@@ -189,23 +206,58 @@ export default function Home() {
           SKILLS
         </h1>
         <IconCloudDemo />
+        <div className="container mx-auto px-4 mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+          {skills.map((group) => (
+            <div key={group.category} className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md">
+              <h3 className="text-lg font-semibold mb-3 text-gray-900 dark:text-white">{group.category}</h3>
+              <div className="flex flex-wrap gap-2">
+                {group.items.map((item) => (
+                  <span key={item} className="bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-3 py-1 rounded-full text-sm">
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
 
       <section className="py-12 bg-gray-100 dark:bg-gray-800">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl sm:text-5xl font-medium tracking-tighter text-black dark:text-white text-center mb-8">
-            ACHIEVEMENTS
+            EDUCATION
+          </h1>
+          {education.map((edu) => (
+            <div key={edu.degree} className="max-w-3xl mx-auto bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md">
+              <div className="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1 mb-2">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{edu.degree}</h3>
+                <p className="text-sm text-gray-500 dark:text-gray-400">{edu.duration}</p>
+              </div>
+              <p className="text-sm text-gray-700 dark:text-gray-300">{edu.institution}</p>
+              <p className="text-sm text-gray-700 dark:text-gray-300">{edu.location}</p>
+              <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">{edu.grade}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="py-12 bg-white dark:bg-gray-900">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl sm:text-5xl font-medium tracking-tighter text-black dark:text-white text-center mb-8">
+            COMMUNITY & CONTRIBUTIONS
           </h1>
           <div className="space-y-8">
             {achievements.map((achievement, index) => (
-              <div key={index} className="flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-8 bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md">
-                <div className="w-full md:w-1/3 max-w-[200px]">
-                  <img
-                    src={achievement.image}
-                    alt={achievement.title}
-                    className="w-full h-auto object-contain"
-                  />
-                </div>
+              <div key={index} className="flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-8 bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                {achievement.image && (
+                  <div className="w-full md:w-1/3 max-w-[200px]">
+                    <img
+                      src={achievement.image}
+                      alt={achievement.title}
+                      className="w-full h-auto object-contain"
+                    />
+                  </div>
+                )}
                 <div className="flex-1">
                   <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">{achievement.title}</h3>
                   <div className="text-sm text-gray-700 dark:text-gray-300 mb-4">
@@ -213,14 +265,16 @@ export default function Home() {
                       <p key={idx} className="mb-1">{point}</p>
                     ))}
                   </div>
-                  <a
-                    href={achievement.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block text-white bg-gray-800 hover:bg-blue-600 dark:bg-gray-600 dark:hover:bg-blue-500 py-2 px-4 rounded-full text-sm"
-                  >
-                    Check Out
-                  </a>
+                  {achievement.link && (
+                    <a
+                      href={achievement.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block text-white bg-gray-800 hover:bg-blue-600 dark:bg-gray-600 dark:hover:bg-blue-500 py-2 px-4 rounded-full text-sm"
+                    >
+                      Check Out
+                    </a>
+                  )}
                 </div>
               </div>
             ))}
@@ -263,24 +317,13 @@ export default function Home() {
             {/* Adjusted button container for mobile */}
             <div className="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4 justify-center">
               <a
-                href="/Vaibhav_Software_Engineer_Resume.pdf"
-                download="Vaibhav_Software_Engineer_Resume.pdf"
+                href="/Vaibhav_Kulkarni_AI_Engineer_Resume.pdf"
+                download="Vaibhav_Kulkarni_AI_Engineer_Resume.pdf"
                 className="inline-block w-full md:w-auto"
               >
                 <ShimmerButton>
                   <span className="text-sm font-medium text-white lg:text-lg">
-                    Download SWE Resume
-                  </span>
-                </ShimmerButton>
-              </a>
-              <a
-                href="/Vaibhav_iOS_Developer_Resume.pdf"
-                download="Vaibhav_iOS_Developer_Resume.pdf"
-                className="inline-block w-full md:w-auto"
-              >
-                <ShimmerButton>
-                  <span className="text-sm font-medium text-white lg:text-lg">
-                    Download iOS Resume
+                    Download Resume
                   </span>
                 </ShimmerButton>
               </a>

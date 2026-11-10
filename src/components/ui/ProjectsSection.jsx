@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import Image from 'next/image'
-import { Github } from 'lucide-react'
+import { ExternalLink, Github } from 'lucide-react'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -11,6 +11,8 @@ import { projects } from "@/data/resume"
 
 export function ProjectsSection() {
   const [selectedProject, setSelectedProject] = useState(projects[0])
+  const images = (selectedProject?.images || []).filter(Boolean)
+  const isGithubLink = selectedProject?.githubLink?.includes("github.com")
 
   return (
     <div className="w-full max-w-4xl mx-auto p-4 md:p-8">
@@ -30,9 +32,10 @@ export function ProjectsSection() {
       {selectedProject && (
         <Card>
           <CardContent className="p-4 md:p-6">
+            {images.length > 0 && (
             <Carousel className="w-full max-w-md mx-auto mb-6">
               <CarouselContent>
-                {selectedProject.images && selectedProject.images.map((image, index) => (
+                {images.map((image, index) => (
                   <CarouselItem key={index}>
                     <div className="p-1">
                       <Image 
@@ -49,6 +52,7 @@ export function ProjectsSection() {
               <CarouselPrevious />
               <CarouselNext />
             </Carousel>
+            )}
 
             <h3 className="text-2xl font-semibold mb-2">{selectedProject.name}</h3>
             <p className="text-gray-600 mb-4">{selectedProject.description}</p>
@@ -68,7 +72,11 @@ export function ProjectsSection() {
 
             <Button asChild>
               <a href={selectedProject.githubLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center">
-                <Github className="mr-2 h-4 w-4" /> View on GitHub
+                {isGithubLink ? (
+                  <><Github className="mr-2 h-4 w-4" /> View on GitHub</>
+                ) : (
+                  <><ExternalLink className="mr-2 h-4 w-4" /> View Live</>
+                )}
               </a>
             </Button>
           </CardContent>

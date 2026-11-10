@@ -18,7 +18,7 @@ export const metadata = {
     icon: '/img2.ico',
     apple: '/img1.png',
   },
-  description: "Explore Vaibhav Kulkarni's portfolio - a Software Engineer specializing in MERN stack and iOS development, showcasing projects and skills.",
+  description: "Explore Vaibhav Kulkarni's portfolio - an AI Engineer building production LLM platforms, AI agents, and real-time speech and document intelligence systems.",
 };
 
 export default function RootLayout({ children }) {
