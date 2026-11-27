@@ -137,27 +137,27 @@ export const experience = [
     company: "Cloud Security Web",
     duration: "October 2025 – Present",
     points: [
-      "Engineered a production-grade cross-platform Electron.js application (Windows/macOS) for real-time medical speech transcription and EHR integration, used by clinicians in production.",
-      "Integrated NVIDIA Parakeet TDT 0.6B-v2 INT8 ASR, pyannote, and 3D-Speaker via sherpa-onnx, enabling CPU-only ONNX inference for production workloads with lower latency and no GPU dependency.",
-      "Built a real-time speaker diarization pipeline covering ML inference, speaker tracking, result processing, and live visualization.",
-      "Architected and deployed a scalable AI inference platform on Azure Container Apps and Service Bus, with on-demand transcription workers, distributed processing, and fault isolation that scales across concurrent sessions while reducing infrastructure cost.",
-      "Designed a secure, low-latency AI application architecture using AudioWorklet, sandboxed Electron IPC, AES-256-GCM, and safeStorage, with data-protection controls for sensitive clinical data.",
-      "Implemented OpenTelemetry observability and maintained 80–90% automated test coverage across unit, integration, performance, and accessibility testing.",
+      "Built a HIPAA-compliant Electron + TypeScript + React desktop app for medical dictation, covering AudioWorklet PCM capture, Windows telehealth system-audio loopback, cross-platform auto-paste into EHRs and native OS notifications; authored ~1,100 of the repo's 2,231 commits, the most of any contributor.",
+      "Designed an offline-first transcription client with a persistent main-process job manager, encrypted Discard-with-Undo, crash-safe atomic writes and recording-consent capture; cutting audio chunks from 5 minutes to 1 minute reduced worker memory from 4.7 GiB to 1.6 GiB per chunk.",
+      "Developed Node.js/Express 5 APIs on Azure Cosmos DB, Service Bus and Blob Storage for asynchronous transcription, creating the backend transcription module: tenant-scoped SAS upload URLs, per-chunk queueing with duplicate detection, word-to-speaker alignment and a desktop OAuth token hand-off.",
+      "Deployed Python speech workers (Parakeet ASR, TitaNet diarization) on Azure Container Apps with KEDA autoscaling (0–50 replicas); wrote cgroup-aware CPU thread sizing, ETag-guarded Cosmos job-store writes with conditional PATCH, and a diarizer retry for crashed child processes.",
+      "Automated CI/CD with GitHub Actions and Azure OIDC (no stored secrets): a signed universal NSIS installer with old-install cleanup, an auto-update service verified with SHA-256 and Authenticode, a packaged-contents security gate, and pinned, hash-checked ML model fetching.",
+      "Load-tested the full pipeline with 50 concurrent 60-minute sessions, achieving 100% success, ~93 s median Stop→result and ~$0.35 per user-hour; also fixed security findings, including a SuperAdmin privilege escalation and missing rate limits on CodeQL-flagged routes.",
     ],
+    link: "https://echopad.ai/",
   },
   {
     jobTitle: "AI Software Engineer",
     company: "Trubot Electronics",
     duration: "February 2024 – February 2026",
     points: [
-      "Designed and built a production ERP/POS platform from scratch, owning frontend, backend, database architecture, authentication, business workflows, AI integration, reporting, and deployment.",
-      "Architected a multi-provider LLM platform using self-hosted Ollama (Qwen/Nemotron) and Google Gemini, with provider abstraction, model routing, automatic failover, retries, and configurable inference workflows.",
-      "Built multimodal document intelligence that extracts structured inventory data from PDFs, images, and XLSX files, automating bulk inventory creation and cutting manual data entry.",
-      "Developed core ERP/POS workflows spanning repair management, inventory, sales, returns, invoicing, customer/supplier management, attendance, payroll, and financial reporting across multiple store locations.",
-      "Designed a unified inventory architecture across retail and repair workflows and implemented JWT authentication with RBAC for Owner, Receptionist, Incharge, and Technician roles.",
-      "Built financial aggregation and document automation pipelines for revenue, COGS, gross-profit reporting, invoices, receipts, and email delivery, using React, FastAPI, REST APIs, SQLite, and Node.js.",
+      "Built a full-stack ERP for mobile-repair shops using React 19, Node.js/Express 5 and SQLite, covering job sheets, invoicing, inventory, suppliers, customers, attendance and reporting, with 97 REST API endpoints over a 20-table relational schema.",
+      "Developed a GST-compliant retail point-of-sale (POS) module with CGST/SGST/IGST tax calculation, coupons, cash-drawer shifts and returns that track restock and wastage; generates PDF tax invoices and emails bills to customers.",
+      "Integrated generative-AI features through a self-hosted Ollama LLM gateway with a Google Gemini fallback to parse invoices and job sheets from free text, extract inventory from CSV, Excel, PDF and image files, suggest repairs and prices, and write dashboard insights.",
+      "Implemented role-based access control (RBAC) for 5 roles with JWT authentication, permission checks on every API route, per-shop data scoping and audit logging.",
+      "Migrated 28K+ lines of frontend and backend code from JavaScript to strict TypeScript, added a 54-test API suite (node:test + Supertest) on isolated SQLite databases, and upgraded dependencies to clear security advisories.",
+      "Automated customer emails with node-cron and Nodemailer/Brevo, sending repair follow-ups, warranty-expiry notices and payment reminders with AI-generated text.",
     ],
-    link: "https://holaio-ai-1.onrender.com",
   },
 ];
 
@@ -204,26 +204,26 @@ export const education = [
 
 export const achievements = [
     {
-      title: "Hacktoberfest 2024 Contributor",
-      points: [
-        "Merged 4+ pull requests in MERN open-source projects.",
-        "Earned Hacktoberfest badges for open-source contributions.",
-      ],
-      image:"https://styles.redditmedia.com/t5_3gryx/styles/communityIcon_iegzxkwcwkmd1.png",
-      link: "https://www.holopin.io/@ivaibhavkulkarni#badges"
-    },
-    {
       title: "Mentorship",
       points: [
         "Conducted coding and software engineering workshops for 50+ junior developers, providing technical guidance on application development, debugging, and engineering practices.",
       ],
     },
     {
+      title: "Hacktoberfest 2024 Contributor",
+      points: [
+        "Merged 4+ pull requests in MERN open-source projects.",
+        "Earned Hacktoberfest badges for open-source contributions.",
+      ],
+      image: "/achievements/hacktoberfest.png",
+      link: "https://www.holopin.io/@ivaibhavkulkarni#badges"
+    },
+    {
       title: "Google Developers Group Hyderabad",
       points: [
         "Active participant in GDG Hyderabad. At Google DevFest I attended sessions on Google Cloud, open protocols (Beckn), and AI agents, and earned a DevFest digital badge.",
       ],
-      image:"https://yt3.googleusercontent.com/ytc/AIdro_mQRyioMUO4VBrlP-jILdsU6_wMf1KSU9syWtUN4hmK1hg=s900-c-k-c0x00ffffff-no-rj",
+      image: "/achievements/gdg.jpg",
       link: "https://www.linkedin.com/posts/vaibhav-kulkarni-7230051ab_devfesthyd24-gdghyd-techinhyd-activity-7276594790320820226-1M3p?utm_source=share&utm_medium=member_desktop&rcm=ACoAADDx1csBCt-TmN3IgCUCG2h0lAsdH-i6ID4",
     },
     {
